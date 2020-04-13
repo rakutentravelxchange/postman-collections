@@ -1,0 +1,679 @@
+{
+  "info": {
+    "_postman_id": "b3a862e0-543e-46bb-8a35-bf1daf1b1867",
+    "name": "Content API",
+    "description": "formerly known as Athena\n\n* property contents (descriptions, policies, etc..)\n* property images\n* amenities\n* regions/city, Geo radius\n\nView documentation: http://dev.zumata.com/athena/index.html",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Hotel",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/hotels/PLPo/en_US/short.json",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "hotels",
+            "PLPo",
+            "en_US",
+            "short.json"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Hotel",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/hotels/PLPo/en_US/short.json",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "hotels",
+                "PLPo",
+                "en_US",
+                "short.json"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Mon, 02 Dec 2019 03:31:08 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=86400"
+            },
+            {
+              "key": "x-request-id",
+              "value": "2ne70khubfl4h036i65emf03"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"address\": \"15 Merbau Road\",\n    \"approximate_cost\": 0,\n    \"category_id\": 1,\n    \"chain_code\": 0,\n    \"city\": \"Singapore\",\n    \"country\": \"\",\n    \"country_code\": \"SG\",\n    \"destination_ids\": [],\n    \"id\": \"PLPo\",\n    \"image_details\": {\n        \"count\": 20,\n        \"prefix\": \"https://zumata-v3-images.s3.amazonaws.com/PLPo/\",\n        \"suffix\": \".jpg\"\n    },\n    \"latitude\": 1.291272,\n    \"longitude\": 103.842017,\n    \"name\": \"Robertson Quay Hotel\",\n    \"original_name\": \"Robertson Quay Hotel\",\n    \"rating\": 3,\n    \"region_ids\": [],\n    \"trip_advisor_rating\": 0,\n    \"trip_advisor_review_count\": 0,\n    \"trustyou_rating\": 69,\n    \"trustyou_review_count\": 5860\n}"
+        }
+      ]
+    },
+    {
+      "name": "Hotels",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/hotels?country_code=US&page=1",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "hotels"
+          ],
+          "query": [
+            {
+              "key": "country_code",
+              "value": "US"
+            },
+            {
+              "key": "page",
+              "value": "1"
+            }
+          ]
+        },
+        "description": "Retrieves all hotels."
+      },
+      "response": [
+        {
+          "name": "Hotels",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/hotels?country_code=US",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "hotels"
+              ],
+              "query": [
+                {
+                  "key": "country_code",
+                  "value": "US"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Mon, 02 Dec 2019 03:21:28 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=86400"
+            },
+            {
+              "key": "x-request-id",
+              "value": "32f86ea9652bc06a5d8651d33f2db1f4"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"data\": {\n        \"items\": [\n            {\n                \"address\": \"750 Southwest Alder Street\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Portland\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"5cgW\",\n                \"latitude\": 45.52018,\n                \"longitude\": -122.680145,\n                \"name\": \"Dossier (formerly Westin Portland)\",\n                \"original_name\": \"Dossier (formerly Westin Portland)\",\n                \"rating\": 4.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"1244 North Dearborn Parkway\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Chicago\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"1Ctn\",\n                \"latitude\": 41.905205,\n                \"longitude\": -87.630157,\n                \"name\": \"Claridge House (formerly Hotel Indigo Chicago Downtown Gold Coast)\",\n                \"original_name\": \"Claridge House (formerly Hotel Indigo Chicago Downtown Gold Coast)\",\n                \"rating\": 3.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"134 Kapahulu Ave\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Honolulu\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"1z46\",\n                \"latitude\": 21.27172089,\n                \"longitude\": -157.82154846,\n                \"name\": \"Waikiki Grand Hotel\",\n                \"original_name\": \"Waikiki Grand Hotel\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"Highway 190 South Death Valley 92328\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Death Valley\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"qbdz\",\n                \"latitude\": 36.45678,\n                \"longitude\": -116.86582,\n                \"name\": \"The Ranch at Death Valley (formerly Furnace Creek Ranch)\",\n                \"original_name\": \"The Ranch at Death Valley (formerly Furnace Creek Ranch)\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"1430 Rhode Island Nw\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Washington, D.C.\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"di15\",\n                \"latitude\": 38.90840015,\n                \"longitude\": -77.03304291,\n                \"name\": \"Kimpton Mason and Rook Hotel (formerly Helix A Kimpton Hotel)\",\n                \"original_name\": \"Kimpton Mason and Rook Hotel (formerly Helix A Kimpton Hotel)\",\n                \"rating\": 4,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"156 Waterfront Street\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Oxon Hill\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"GJt1\",\n                \"latitude\": 38.78501892,\n                \"longitude\": -77.01609039,\n                \"name\": \"Ac Hotel Washington Dc At National Harbor (formerly Aloft Washington National Harbor)\",\n                \"original_name\": \"Ac Hotel Washington Dc At National Harbor (formerly Aloft Washington National Harbor)\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"75-6040 Alii Drive - 96740 Kailua-Kona\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Hawaii's Big Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"bjFP\",\n                \"latitude\": 19.62,\n                \"longitude\": -155.98,\n                \"name\": \"Royal Sea Cliff Kona by Outrigger  (formerly Outrigger Royal Sea Cliff)\",\n                \"original_name\": \"Royal Sea Cliff Kona by Outrigger  (formerly Outrigger Royal Sea Cliff)\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"1610 Pkwy.\",\n                \"approximate_cost\": 0,\n                \"category_id\": 3,\n                \"chain_code\": 0,\n                \"city\": \"Las Vegas\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"Fcul\",\n                \"latitude\": 36.102932,\n                \"longitude\": -114.931885,\n                \"name\": \"Hilton Lake Las Vegas Resort & Spa (formerly Ritz Carlton Lake Las Vegas)\",\n                \"original_name\": \"Hilton Lake Las Vegas Resort & Spa (formerly Ritz Carlton Lake Las Vegas)\",\n                \"rating\": 4,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"149 Victoria Court\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Duck\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"dB6y\",\n                \"latitude\": 36.16322,\n                \"longitude\": -75.74735,\n                \"name\": \"The Porter House (formerly Banana Daiquiri) 6 Br Home\",\n                \"original_name\": \"The Porter House (formerly Banana Daiquiri) 6 Br Home\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"2826 Parkway\",\n                \"approximate_cost\": 0,\n                \"category_id\": 2,\n                \"chain_code\": 0,\n                \"city\": \"Pigeon Forge\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"8ss6\",\n                \"latitude\": 35.79939,\n                \"longitude\": -83.56981,\n                \"name\": \"Red Roof Inn & Suites Pigeon Forge - Parkway (formerly Red Roof Inn Pigeon Forge Hotel)\",\n                \"original_name\": \"Red Roof Inn & Suites Pigeon Forge - Parkway (formerly Red Roof Inn Pigeon Forge Hotel)\",\n                \"rating\": 2,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"425 Northpoint St., San Francisco, Ca, U.S.A. 9413\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"San Francisco California\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"IGVZ\",\n                \"latitude\": 37.8063374,\n                \"longitude\": -122.4163115,\n                \"name\": \"Hotel Zoe Fisherman's Wharf\",\n                \"original_name\": \"Hotel Zoe Fisherman's Wharf\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"310 West Broadway\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"New York City\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"1Tcv\",\n                \"latitude\": 40.72,\n                \"longitude\": -74,\n                \"name\": \"Soho Grand Hotel\",\n                \"original_name\": \"Soho Grand Hotel\",\n                \"rating\": 4,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"9240 West Highway 192\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Clermont\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"HkxF\",\n                \"latitude\": 28.345985,\n                \"longitude\": -81.65943,\n                \"name\": \"Days Inn Clermont South\",\n                \"original_name\": \"Days Inn Clermont South\",\n                \"rating\": 2,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"1000 Arlberg Avenue Girdwood Ak 99587 Usa\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Girdwood\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"xfOl\",\n                \"latitude\": 60.97054,\n                \"longitude\": -149.10064,\n                \"name\": \"The Hotel Alyeska\",\n                \"original_name\": \"The Hotel Alyeska\",\n                \"rating\": 4,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"1 Main Street, South Rim Grand Canyon National Park Grand Canyon 86023\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Grand Canyon\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"62Gb\",\n                \"latitude\": 36.05424274,\n                \"longitude\": -112.11955776,\n                \"name\": \"Yavapai Lodge West\",\n                \"original_name\": \"Yavapai Lodge West\",\n                \"rating\": 2,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"64740 Wuksachi Way Wuksachi Vi\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Sequoia National Park\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"Q5r8\",\n                \"latitude\": 36.605816,\n                \"longitude\": -118.75393,\n                \"name\": \"Wuksachi Lodge\",\n                \"original_name\": \"Wuksachi Lodge\",\n                \"rating\": 2.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"3200 River Ranch Blvd\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Lake Wales\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"n7bt\",\n                \"latitude\": 27.77060011,\n                \"longitude\": -81.19281843,\n                \"name\": \"Westgate River Ranch Resort\",\n                \"original_name\": \"Westgate River Ranch Resort\",\n                \"rating\": 2,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"1150 S Beverly Dr\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Los Angeles\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"zo16\",\n                \"latitude\": 34.056333,\n                \"longitude\": -118.395855,\n                \"name\": \"Beverly Hills Marriott\",\n                \"original_name\": \"Beverly Hills Marriott\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"3535 Las Vegas Boulevard South\",\n                \"approximate_cost\": 0,\n                \"category_id\": 3,\n                \"chain_code\": 0,\n                \"city\": \"Las Vegas\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"SF5e\",\n                \"latitude\": 36.118622,\n                \"longitude\": -115.17157,\n                \"name\": \"The Linq Hotel And Casino\",\n                \"original_name\": \"The Linq Hotel And Casino\",\n                \"rating\": 4,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"3570 Las Vegas Boulevard South\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Las Vegas\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"vtBv\",\n                \"latitude\": 36.11617,\n                \"longitude\": -115.17449,\n                \"name\": \"Caesars Palace Hotel & Casino\",\n                \"original_name\": \"Caesars Palace Hotel & Casino\",\n                \"rating\": 4,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"3708 South Las Vegas Boulevard\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Las Vegas\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"GTvt\",\n                \"latitude\": 36.109772,\n                \"longitude\": -115.173881,\n                \"name\": \"The Cosmopolitan of Las Vegas\",\n                \"original_name\": \"The Cosmopolitan of Las Vegas\",\n                \"rating\": 5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"234 West 48th Street\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"New York\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"ewh6\",\n                \"latitude\": 40.76062,\n                \"longitude\": -73.98626,\n                \"name\": \"The Gallivant Times Square New York\",\n                \"original_name\": \"The Gallivant Times Square New York\",\n                \"rating\": 4,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"3355 Las Vegas Blvd Southlas Vegas Nv 89109United States\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Las Vegas\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"UtNh\",\n                \"latitude\": 36.12,\n                \"longitude\": -115.17,\n                \"name\": \"Venetian Resort Hotel Casino\",\n                \"original_name\": \"Venetian Resort Hotel Casino\",\n                \"rating\": 5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"711 S Main St\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Blanding\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"GV1n\",\n                \"latitude\": 37.615394,\n                \"longitude\": -109.478675,\n                \"name\": \"Rodeway Inn & Suites\",\n                \"original_name\": \"Rodeway Inn & Suites\",\n                \"rating\": 2,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"9 Crossings Court\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Little Rock\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"fyLo\",\n                \"latitude\": 34.726675,\n                \"longitude\": -92.398227,\n                \"name\": \"La Quinta Inn & Suites Little Rock West\",\n                \"original_name\": \"La Quinta Inn & Suites Little Rock West\",\n                \"rating\": 2,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"1500 I 35 South Exit 154B Laredo St.\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"San Antonio\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"m5fS\",\n                \"latitude\": 29.410503,\n                \"longitude\": -98.507664,\n                \"name\": \"Studio 6 San Antonio (ex The Inn at Market Square Downtown) \",\n                \"original_name\": \"Studio 6 San Antonio (ex The Inn at Market Square Downtown) \",\n                \"rating\": 2,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"7677 North 16Th Street\",\n                \"approximate_cost\": 0,\n                \"category_id\": 3,\n                \"chain_code\": 0,\n                \"city\": \"Phoenix\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"gU7P\",\n                \"latitude\": 33.548374,\n                \"longitude\": -112.047752,\n                \"name\": \"Pointe Hilton Squaw Peak Resort\",\n                \"original_name\": \"Pointe Hilton Squaw Peak Resort\",\n                \"rating\": 4,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"2615 Bienville Blvd.\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"BQ2K\",\n                \"latitude\": 30.24975,\n                \"longitude\": -88.17321,\n                \"name\": \"001 Melray Haven by RedAwning\",\n                \"original_name\": \"001 Melray Haven by RedAwning\",\n                \"rating\": 3.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"50 Forney Johnston\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"rCbh\",\n                \"latitude\": 30.24475,\n                \"longitude\": -88.09833,\n                \"name\": \"002 Sandcastle 6C by RedAwning\",\n                \"original_name\": \"002 Sandcastle 6C by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"2237 Bienville Boulevard\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"xZv7\",\n                \"latitude\": 30.25033,\n                \"longitude\": -88.15131,\n                \"name\": \"003 Ordered Chaos by RedAwning\",\n                \"original_name\": \"003 Ordered Chaos by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"2344 Island Shores Drive\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"S9hk\",\n                \"latitude\": 30.25181,\n                \"longitude\": -88.15654,\n                \"name\": \"005 Bayside Oasis\",\n                \"original_name\": \"005 Bayside Oasis\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"2509 Bienville Blvd\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"QNCM\",\n                \"latitude\": 30.25014,\n                \"longitude\": -88.16565,\n                \"name\": \"007 McDearman House by RedAwning\",\n                \"original_name\": \"007 McDearman House by RedAwning\",\n                \"rating\": 3.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"2306 Bienville Boulevard\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"Wthg\",\n                \"latitude\": 30.25118,\n                \"longitude\": -88.15346,\n                \"name\": \"008 Sea Horsin Around\",\n                \"original_name\": \"008 Sea Horsin Around\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"50 Forney Johnston\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"PF2D\",\n                \"latitude\": 30.24355,\n                \"longitude\": -88.09804,\n                \"name\": \"009 Sandcastle 3C 2 Bedrooms 2.5 Bathrooms Condo\",\n                \"original_name\": \"009 Sandcastle 3C 2 Bedrooms 2.5 Bathrooms Condo\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"40090 Lakeview Drive\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Big Bear Lake\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"x5kg\",\n                \"latitude\": 34.24834,\n                \"longitude\": -116.92732,\n                \"name\": \"0100 Lodge House\",\n                \"original_name\": \"0100 Lodge House\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"40090 Lakeview Drive\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Big Bear Lake\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"wSFz\",\n                \"latitude\": 34.24834,\n                \"longitude\": -116.92732,\n                \"name\": \"0101 Sunset\",\n                \"original_name\": \"0101 Sunset\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"40090 Lakeview Drive\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Big Bear Lake\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"f6wP\",\n                \"latitude\": 34.24834,\n                \"longitude\": -116.92732,\n                \"name\": \"0102 Little Pines\",\n                \"original_name\": \"0102 Little Pines\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"40090 Lakeview Drive\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Big Bear Lake\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"Szn6\",\n                \"latitude\": 34.24834,\n                \"longitude\": -116.92732,\n                \"name\": \"0103 Big Pines\",\n                \"original_name\": \"0103 Big Pines\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"40090 Lakeview Dr\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Big Bear Lake\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"qPjg\",\n                \"latitude\": 34.24834,\n                \"longitude\": -116.92732,\n                \"name\": \"0104 Lakeview\",\n                \"original_name\": \"0104 Lakeview\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"40090 Lakeview Dr.\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Big Bear Lake\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"dr9n\",\n                \"latitude\": 34.24834,\n                \"longitude\": -116.92732,\n                \"name\": \"0105 Juniper\",\n                \"original_name\": \"0105 Juniper\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"40090 Lakeview Dr.\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Big Bear Lake\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"wqF5\",\n                \"latitude\": 34.24834,\n                \"longitude\": -116.92732,\n                \"name\": \"0106 Lupine\",\n                \"original_name\": \"0106 Lupine\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"40090 Lakeview Dr.\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Big Bear Lake\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"M2cy\",\n                \"latitude\": 34.24834,\n                \"longitude\": -116.92732,\n                \"name\": \"0107 Lonepine\",\n                \"original_name\": \"0107 Lonepine\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"40090 Lakeview Drive\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Big Bear Lake\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"62pd\",\n                \"latitude\": 34.24834,\n                \"longitude\": -116.92732,\n                \"name\": \"0108 Sunrise\",\n                \"original_name\": \"0108 Sunrise\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"40090 Lakeview Drive\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Big Bear Lake\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"DND4\",\n                \"latitude\": 34.24834,\n                \"longitude\": -116.92732,\n                \"name\": \"0109 Lakeside\",\n                \"original_name\": \"0109 Lakeside\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"515 Forney Johnston\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"M2Z2\",\n                \"latitude\": 30.25547,\n                \"longitude\": -88.09806,\n                \"name\": \"010 My Happy Place by RedAwning\",\n                \"original_name\": \"010 My Happy Place by RedAwning\",\n                \"rating\": 3.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"40090 Lakeview Dr\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Big Bear Lake\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"sBPT\",\n                \"latitude\": 34.24834,\n                \"longitude\": -116.92732,\n                \"name\": \"0110 Lakefront\",\n                \"original_name\": \"0110 Lakefront\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"40090 Lakeview Drive\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Big Bear Lake\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"prFW\",\n                \"latitude\": 34.24834,\n                \"longitude\": -116.92732,\n                \"name\": \"0111 Twin Pines\",\n                \"original_name\": \"0111 Twin Pines\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"138 Fort Louis Avenue\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"kSCT\",\n                \"latitude\": 30.2507,\n                \"longitude\": -88.09929,\n                \"name\": \"012 Seven Shells by RedAwning\",\n                \"original_name\": \"012 Seven Shells by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"921 Delchamps\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"t7zJ\",\n                \"latitude\": 30.26153,\n                \"longitude\": -88.11177,\n                \"name\": \"015 Red Roof Inn 4 Bedrooms 4 Bathrooms Home\",\n                \"original_name\": \"015 Red Roof Inn 4 Bedrooms 4 Bathrooms Home\",\n                \"rating\": 3.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"910 Lafayette Pl\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"4Fgq\",\n                \"latitude\": 30.25252,\n                \"longitude\": -88.11102,\n                \"name\": \"016 La Fortuna by RedAwning\",\n                \"original_name\": \"016 La Fortuna by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"2014 Bienville Boulevard\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"ZfT2\",\n                \"latitude\": 30.2525,\n                \"longitude\": -88.13924,\n                \"name\": \"017 Morris House 4 Bedrooms 2.5 Bathrooms Home\",\n                \"original_name\": \"017 Morris House 4 Bedrooms 2.5 Bathrooms Home\",\n                \"rating\": 4,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"2934 Bienville Boulevard\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"YQQd\",\n                \"latitude\": 30.24941,\n                \"longitude\": -88.19076,\n                \"name\": \"018 Greenscape 2 Bedrooms 2 Bathrooms Home\",\n                \"original_name\": \"018 Greenscape 2 Bedrooms 2 Bathrooms Home\",\n                \"rating\": 3.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"105 Seneca Court\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"rM2J\",\n                \"latitude\": 30.24973,\n                \"longitude\": -88.17561,\n                \"name\": \"020 Crew Rest (AKA La Place de Jubilee) by RedAwning\",\n                \"original_name\": \"020 Crew Rest (AKA La Place de Jubilee) by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"1701 Bienville Boulevard\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"y22w\",\n                \"latitude\": 30.25011,\n                \"longitude\": -88.13109,\n                \"name\": \"021 Beach Club 103\",\n                \"original_name\": \"021 Beach Club 103\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"112 Audubon Pl.\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"hYgM\",\n                \"latitude\": 30.24462,\n                \"longitude\": -88.09216,\n                \"name\": \"023 Beach Therapy by RedAwning\",\n                \"original_name\": \"023 Beach Therapy by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"620 Hernando Pl\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"BWKJ\",\n                \"latitude\": 30.24439,\n                \"longitude\": -88.10145,\n                \"name\": \"024 Casita Rosa by RedAwning\",\n                \"original_name\": \"024 Casita Rosa by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"407 Conde\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"7PwS\",\n                \"latitude\": 30.25296,\n                \"longitude\": -88.09674,\n                \"name\": \"025 Conde Dauphin Island Home 4 Bedrooms 2 Bathrooms Home\",\n                \"original_name\": \"025 Conde Dauphin Island Home 4 Bedrooms 2 Bathrooms Home\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"0264 Bachelor Ridge\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Avon\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"XpFk\",\n                \"latitude\": 39.62305,\n                \"longitude\": -106.54636,\n                \"name\": \"0264 Bachelor Ridge Townhouse 5 Bedrooms 5.5 Bathrooms Townhouse\",\n                \"original_name\": \"0264 Bachelor Ridge Townhouse 5 Bedrooms 5.5 Bathrooms Townhouse\",\n                \"rating\": 3.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"1414 O'Hara Ln\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"qXZN\",\n                \"latitude\": 30.25131,\n                \"longitude\": -88.12346,\n                \"name\": \"028 Dee's Place by RedAwning\",\n                \"original_name\": \"028 Dee's Place by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"339 Port Royal St\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"VZnM\",\n                \"latitude\": 30.25621,\n                \"longitude\": -88.14014,\n                \"name\": \"029 Eventide Cottage by RedAwning\",\n                \"original_name\": \"029 Eventide Cottage by RedAwning\",\n                \"rating\": 3.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"4553 Ada Ln\",\n                \"approximate_cost\": 0,\n                \"category_id\": 7,\n                \"chain_code\": 0,\n                \"city\": \"Kissimmee\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"nwMW\",\n                \"latitude\": 28.30261,\n                \"longitude\": -81.465,\n                \"name\": \"#02 Bella Vida Resort Three Bedroom Townhouse\",\n                \"original_name\": \"#02 Bella Vida Resort Three Bedroom Townhouse\",\n                \"rating\": 3.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"302 Polaris\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"KjDX\",\n                \"latitude\": 30.25361,\n                \"longitude\": -88.14113,\n                \"name\": \"030 Dr. Raynor Polaris\",\n                \"original_name\": \"030 Dr. Raynor Polaris\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"110 St. Andrews Court\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"NF57\",\n                \"latitude\": 30.25164,\n                \"longitude\": -88.14711,\n                \"name\": \"031 Crabby Patty\",\n                \"original_name\": \"031 Crabby Patty\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"50 Forney Johnston #5B\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"bkJv\",\n                \"latitude\": 30.24502,\n                \"longitude\": -88.09844,\n                \"name\": \"032 Sandcastle 5B by RedAwning\",\n                \"original_name\": \"032 Sandcastle 5B by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"1812 Cadillac Avenue\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"qfXq\",\n                \"latitude\": 30.2512,\n                \"longitude\": -88.13495,\n                \"name\": \"034 Gone Fishin' by RedAwning\",\n                \"original_name\": \"034 Gone Fishin' by RedAwning\",\n                \"rating\": 3.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"50 Forney Johnston Dr\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"8vVK\",\n                \"latitude\": 30.24474,\n                \"longitude\": -88.09831,\n                \"name\": \"037 Sandcastle 6D by RedAwning\",\n                \"original_name\": \"037 Sandcastle 6D by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"2625 Bienville Boulevard\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"qh4x\",\n                \"latitude\": 30.24966,\n                \"longitude\": -88.17482,\n                \"name\": \"038 G PA's Beach House by RedAwning\",\n                \"original_name\": \"038 G PA's Beach House by RedAwning\",\n                \"rating\": 3.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"039211 Hwy 6\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Avon\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"XFW9\",\n                \"latitude\": 39.62572,\n                \"longitude\": -106.50814,\n                \"name\": \"039211 Hwy 6 Condo Unit C106\",\n                \"original_name\": \"039211 Hwy 6 Condo Unit C106\",\n                \"rating\": 3.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"2305 Island Shores Dr\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"MKv7\",\n                \"latitude\": 30.25207,\n                \"longitude\": -88.15278,\n                \"name\": \"039 Two Views by RedAwning\",\n                \"original_name\": \"039 Two Views by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"363 Port Royal St\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"N5r4\",\n                \"latitude\": 30.25699,\n                \"longitude\": -88.13805,\n                \"name\": \"040 Baywatch by RedAwning\",\n                \"original_name\": \"040 Baywatch by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"2608 Bridgeview Dr\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"f5xC\",\n                \"latitude\": 30.25149,\n                \"longitude\": -88.17184,\n                \"name\": \"042 North Shore by RedAwning\",\n                \"original_name\": \"042 North Shore by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"42652 Juniper\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Big Bear Lake\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"jqkN\",\n                \"latitude\": 34.25026,\n                \"longitude\": -116.87189,\n                \"name\": \"042 Pinewood Lodge by RedAwning\",\n                \"original_name\": \"042 Pinewood Lodge by RedAwning\",\n                \"rating\": 3.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"508 Ft Stoodert Pl\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"QKRT\",\n                \"latitude\": 30.24847,\n                \"longitude\": -88.10012,\n                \"name\": \"044 The Bird's Nest\",\n                \"original_name\": \"044 The Bird's Nest\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"40090 Lakeview Drive\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Big Bear Lake\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"kdmM\",\n                \"latitude\": 34.24834,\n                \"longitude\": -116.92732,\n                \"name\": \"0450 Shore Acres Lodge Unit 106 to Unit 111\",\n                \"original_name\": \"0450 Shore Acres Lodge Unit 106 to Unit 111\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"40090 Lakeview Drive\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Big Bear Lake\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"y2Mc\",\n                \"latitude\": 34.24834,\n                \"longitude\": -116.92732,\n                \"name\": \"0451 Shore Acres Lodge Unit 100 Unit 105\",\n                \"original_name\": \"0451 Shore Acres Lodge Unit 100 Unit 105\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"40900 Lakeview Drive\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Big Bear Lake\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"sHYw\",\n                \"latitude\": 34.24822,\n                \"longitude\": -116.92727,\n                \"name\": \"0452 Shore Acres Lodge Unit 100 to Unit 111\",\n                \"original_name\": \"0452 Shore Acres Lodge Unit 100 to Unit 111\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"105 Ryan Court\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"xjW6\",\n                \"latitude\": 30.25109,\n                \"longitude\": -88.14668,\n                \"name\": \"046 Our Beach House by RedAwning\",\n                \"original_name\": \"046 Our Beach House by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"51 Forney Johnston Dr. Surf Club B8\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"8TVB\",\n                \"latitude\": 30.24516,\n                \"longitude\": -88.09858,\n                \"name\": \"048 Surf Club B8 by RedAwning\",\n                \"original_name\": \"048 Surf Club B8 by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"104 Spanish Court\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"7gBN\",\n                \"latitude\": 30.24961,\n                \"longitude\": -88.17832,\n                \"name\": \"049 Beach Comber by RedAwning\",\n                \"original_name\": \"049 Beach Comber by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"205 Magnolia Court\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"hrPX\",\n                \"latitude\": 30.24504,\n                \"longitude\": -88.10237,\n                \"name\": \"052 See Turtles by RedAwning\",\n                \"original_name\": \"052 See Turtles by RedAwning\",\n                \"rating\": 3.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"2106 Bienville Boulevard\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"YKGf\",\n                \"latitude\": 30.25251,\n                \"longitude\": -88.14192,\n                \"name\": \"054 Summer Daze\",\n                \"original_name\": \"054 Summer Daze\",\n                \"rating\": 3.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"803 Itasca Place\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"4W4R\",\n                \"latitude\": 30.24726,\n                \"longitude\": -88.1078,\n                \"name\": \"055 Bough House\",\n                \"original_name\": \"055 Bough House\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"6790 Central Florida Pkwy\",\n                \"approximate_cost\": 0,\n                \"category_id\": 7,\n                \"chain_code\": 0,\n                \"city\": \"Orlando\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"kYnH\",\n                \"latitude\": 28.40839,\n                \"longitude\": -81.47124,\n                \"name\": \"#05 Two Bedroom Condo\",\n                \"original_name\": \"#05 Two Bedroom Condo\",\n                \"rating\": null,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"2253 Mallard Street\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"Q26M\",\n                \"latitude\": 30.2517,\n                \"longitude\": -88.15178,\n                \"name\": \"064 LE Palm Palm by RedAwning\",\n                \"original_name\": \"064 LE Palm Palm by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"50 Forney Johnston Dr\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"GdJT\",\n                \"latitude\": 30.24474,\n                \"longitude\": -88.09831,\n                \"name\": \"069 Sandcastle 3F by RedAwning\",\n                \"original_name\": \"069 Sandcastle 3F by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"2238 Sandpiper\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"N6Gq\",\n                \"latitude\": 30.25324,\n                \"longitude\": -88.15016,\n                \"name\": \"071 Dream Catcher by RedAwning\",\n                \"original_name\": \"071 Dream Catcher by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"50 Forney Johnston Dr\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"y7Dm\",\n                \"latitude\": 30.24475,\n                \"longitude\": -88.09833,\n                \"name\": \"074 Sandcastle 7D by RedAwning\",\n                \"original_name\": \"074 Sandcastle 7D by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"57 W Kuilima Loop\",\n                \"approximate_cost\": 0,\n                \"category_id\": 7,\n                \"chain_code\": 0,\n                \"city\": \"Kahuku\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"RzQS\",\n                \"latitude\": 21.69956,\n                \"longitude\": -157.99416,\n                \"name\": \"077 West\",\n                \"original_name\": \"077 West\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"9221 Frost Creek Road\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Maple Falls\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"6W5H\",\n                \"latitude\": 48.96633,\n                \"longitude\": -122.06714,\n                \"name\": \"07MF Silver Lake #7\",\n                \"original_name\": \"07MF Silver Lake #7\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"1003 Maldanado Pl\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"d4qR\",\n                \"latitude\": 30.25198,\n                \"longitude\": -88.114,\n                \"name\": \"081 Hidden in the Pines by RedAwning\",\n                \"original_name\": \"081 Hidden in the Pines by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"333 Audubon Pl.\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"xnBQ\",\n                \"latitude\": 30.24437,\n                \"longitude\": -88.09408,\n                \"name\": \"082 Dauphin on the Gulf by RedAwning\",\n                \"original_name\": \"082 Dauphin on the Gulf by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"1413 Olive Ln\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"mgyM\",\n                \"latitude\": 30.24952,\n                \"longitude\": -88.12174,\n                \"name\": \"088 Dune Vista by RedAwning\",\n                \"original_name\": \"088 Dune Vista by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"307 Audubon Pl\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Dauphin Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"zFk8\",\n                \"latitude\": 30.24391,\n                \"longitude\": -88.09225,\n                \"name\": \"094 Seaside\",\n                \"original_name\": \"094 Seaside\",\n                \"rating\": 3.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"4103 S Ocean Blvd\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"North Myrtle Beach\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"FqtP\",\n                \"latitude\": 33.79596,\n                \"longitude\": -78.72468,\n                \"name\": \"0982 2 Cool Air Cottage Upstairs 3 Br Home\",\n                \"original_name\": \"0982 2 Cool Air Cottage Upstairs 3 Br Home\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"9 Nicklaus Lane\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Kiawah Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"HWq4\",\n                \"latitude\": 32.60292,\n                \"longitude\": -80.08201,\n                \"name\": \"09 Nicklaus Lane 7 Bedrooms 6.5 Bathrooms Home\",\n                \"original_name\": \"09 Nicklaus Lane 7 Bedrooms 6.5 Bathrooms Home\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"1000 Lakeshore Blvd\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Incline Village\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"mxJs\",\n                \"latitude\": 39.23932,\n                \"longitude\": -119.94219,\n                \"name\": \"1000 Lakeshore Blvd Condo Unirt12 2 Bedrooms 2 Bathrooms Condo\",\n                \"original_name\": \"1000 Lakeshore Blvd Condo Unirt12 2 Bedrooms 2 Bathrooms Condo\",\n                \"rating\": 4,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"1000 Lakeshore Blvd\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Incline Village\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"p8Jm\",\n                \"latitude\": 39.23929,\n                \"longitude\": -119.9422,\n                \"name\": \"1000 Lakeshore Blvd Condo Unit 4 2 Bedrooms 2 Bathrooms Condo\",\n                \"original_name\": \"1000 Lakeshore Blvd Condo Unit 4 2 Bedrooms 2 Bathrooms Condo\",\n                \"rating\": 3.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"1000 Lakeshore\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"Incline Village\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"htFy\",\n                \"latitude\": 39.23929,\n                \"longitude\": -119.9422,\n                \"name\": \"1000 Lakeshore Townhouse Unit 20 3 Bedrooms 2.5 Bathrooms Townhouse\",\n                \"original_name\": \"1000 Lakeshore Townhouse Unit 20 3 Bedrooms 2.5 Bathrooms Townhouse\",\n                \"rating\": 4,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"1000 Padre Blvd\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"South Padre Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"qMMR\",\n                \"latitude\": 26.13226,\n                \"longitude\": -97.17392,\n                \"name\": \"1000 Padre Blvd Condo #316 2 Bedrooms 2.5 Bathrooms Condo\",\n                \"original_name\": \"1000 Padre Blvd Condo #316 2 Bedrooms 2.5 Bathrooms Condo\",\n                \"rating\": 3.5,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            },\n            {\n                \"address\": \"1000 Padre Blvd\",\n                \"approximate_cost\": 0,\n                \"category_id\": 1,\n                \"chain_code\": 0,\n                \"city\": \"South Padre Island\",\n                \"country\": \"\",\n                \"country_code\": \"US\",\n                \"destination_ids\": [],\n                \"id\": \"gX8F\",\n                \"latitude\": 26.09284,\n                \"longitude\": -97.16508,\n                \"name\": \"1000 Padre Blvd Condo OFC 715 by RedAwning\",\n                \"original_name\": \"1000 Padre Blvd Condo OFC 715 by RedAwning\",\n                \"rating\": 3,\n                \"region_ids\": [],\n                \"trip_advisor_rating\": 0,\n                \"trip_advisor_review_count\": 0\n            }\n        ],\n        \"next_page\": {\n            \"page\": 2,\n            \"url\": \"/hotels?country_code=US&page=2\"\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Hotels",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"hotel_list\": [\"PLPo\"]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/hotels/en_US/short.json",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "hotels",
+            "en_US",
+            "short.json"
+          ]
+        },
+        "description": "Retrieves all hotels."
+      },
+      "response": []
+    },
+    {
+      "name": "Hotels changelog",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/hotels-changelog?updated_at=2019-11-01 00:00:00",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "hotels-changelog"
+          ],
+          "query": [
+            {
+              "key": "updated_at",
+              "value": "2019-11-01 00:00:00"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Hotels changelog",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/hotels-changelog?updated_at=2019-11-01 00:00:00",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "hotels-changelog"
+              ],
+              "query": [
+                {
+                  "key": "updated_at",
+                  "value": "2019-11-01 00:00:00"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Mon, 02 Dec 2019 03:29:07 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "cache-control",
+              "value": "public, max-age=86400"
+            },
+            {
+              "key": "x-request-id",
+              "value": "4fc95f454b9e41d3fd84897d391aa450"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"data\": {\n        \"items\": [\n            \"icLt\",\n            \"Udx6\",\n            \"gpWq\",\n            \"386l\",\n            \"jyLT\",\n            \"bfIh\",\n            \"WIK6\",\n            \"DJTP\",\n            \"tvke\",\n            \"cjrF\",\n            \"jzKk\",\n            \"L3Ai\",\n            \"qVCv\",\n            \"DXNo\",\n            \"AUlr\",\n            \"Bcpn\",\n            \"KuOE\",\n            \"5cgW\",\n            \"5kR7\",\n            \"SMXZ\",\n            \"yY98\",\n            \"coas\",\n            \"7Lyr\",\n            \"5lS3\",\n            \"mMLR\",\n            \"Rw9A\",\n            \"A9Q4\",\n            \"7ztn\",\n            \"bl4t\",\n            \"xUjw\",\n            \"uqVQ\",\n            \"aTaF\",\n            \"86Pc\",\n            \"PAPa\",\n            \"sWU9\",\n            \"Cmd7\",\n            \"x8OV\",\n            \"WwpN\",\n            \"8EJA\",\n            \"jXZV\",\n            \"PT1e\",\n            \"GLCM\",\n            \"YIIk\",\n            \"ls9F\",\n            \"lrbT\",\n            \"cxRl\",\n            \"laRt\",\n            \"hJrQ\",\n            \"8j3Q\",\n            \"yQSy\",\n            \"uzLg\",\n            \"TjAR\",\n            \"69zD\",\n            \"zt8S\",\n            \"T1To\",\n            \"Fcul\",\n            \"bjFP\",\n            \"GJt1\",\n            \"9pzY\",\n            \"di15\",\n            \"CeE0\",\n            \"qbdz\",\n            \"Ial3\",\n            \"1z46\",\n            \"MlcV\",\n            \"NESK\",\n            \"g5UP\",\n            \"wXpX\",\n            \"bdhI\",\n            \"eEIR\",\n            \"7U4F\",\n            \"E2po\",\n            \"RLuP\",\n            \"vMPm\",\n            \"CYmB\",\n            \"yH2j\",\n            \"etXI\",\n            \"y4XL\",\n            \"iZhE\",\n            \"SWCo\",\n            \"rjwW\",\n            \"PD7j\",\n            \"xPN2\",\n            \"Hbtu\",\n            \"QhdW\",\n            \"S2Yu\",\n            \"P5KA\",\n            \"h1qv\",\n            \"1Ctn\",\n            \"zK6E\",\n            \"Lxgx\",\n            \"Thq1\",\n            \"pBiG\",\n            \"kvqn\",\n            \"DTzs\",\n            \"HKcP\",\n            \"8jCz\",\n            \"09uu\",\n            \"qoW0\"\n        ]\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Hotels categories",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/hotels-categories",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "hotels-categories"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Hotels categories",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/hotels-categories",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "hotels-categories"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Mon, 02 Dec 2019 03:32:44 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "cache-control",
+              "value": "max-age=0, private, must-revalidate"
+            },
+            {
+              "key": "x-request-id",
+              "value": "ed8f87aed795da8a882418ef1df71d72"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"data\": {\n        \"items\": [\n            {\n                \"id\": 1,\n                \"name\": \"Hotel\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Motel\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Resort\"\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Inn\"\n            },\n            {\n                \"id\": 5,\n                \"name\": \"Bed & breakfast\"\n            },\n            {\n                \"id\": 6,\n                \"name\": \"Guesthouse\"\n            },\n            {\n                \"id\": 7,\n                \"name\": \"Condo\"\n            },\n            {\n                \"id\": 8,\n                \"name\": \"All-inclusive property\"\n            },\n            {\n                \"id\": 9,\n                \"name\": \"Cabin\"\n            },\n            {\n                \"id\": 10,\n                \"name\": \"Chalet\"\n            },\n            {\n                \"id\": 11,\n                \"name\": \"Cottage\"\n            },\n            {\n                \"id\": 12,\n                \"name\": \"Hostel/Backpacker accommodation\"\n            },\n            {\n                \"id\": 13,\n                \"name\": \"Ranch\"\n            },\n            {\n                \"id\": 14,\n                \"name\": \"Villa\"\n            },\n            {\n                \"id\": 15,\n                \"name\": \"Lodge\"\n            },\n            {\n                \"id\": 16,\n                \"name\": \"Apartment\"\n            },\n            {\n                \"id\": 17,\n                \"name\": \"Private vacation home\"\n            },\n            {\n                \"id\": 18,\n                \"name\": \"Houseboat\"\n            },\n            {\n                \"id\": 20,\n                \"name\": \"Ryokan\"\n            },\n            {\n                \"id\": 21,\n                \"name\": \"Tree house property\"\n            },\n            {\n                \"id\": 22,\n                \"name\": \"Aparthotel\"\n            },\n            {\n                \"id\": 23,\n                \"name\": \"Condominium resort\"\n            },\n            {\n                \"id\": 24,\n                \"name\": \"Campsite\"\n            },\n            {\n                \"id\": 25,\n                \"name\": \"Riad\"\n            },\n            {\n                \"id\": 26,\n                \"name\": \"Hostal\"\n            },\n            {\n                \"id\": 29,\n                \"name\": \"Country House \"\n            },\n            {\n                \"id\": 30,\n                \"name\": \"Pension\"\n            },\n            {\n                \"id\": 31,\n                \"name\": \"Pousada (Portugal)\"\n            },\n            {\n                \"id\": 32,\n                \"name\": \"Pousada (Brazil)\"\n            },\n            {\n                \"id\": 33,\n                \"name\": \"Residence\"\n            },\n            {\n                \"id\": 34,\n                \"name\": \"TownHouse\"\n            },\n            {\n                \"id\": 36,\n                \"name\": \"Castle\"\n            },\n            {\n                \"id\": 37,\n                \"name\": \"Safari/Tentalow\"\n            },\n            {\n                \"id\": 39,\n                \"name\": \"Palace\"\n            },\n            {\n                \"id\": 40,\n                \"name\": \"Agritourism property\"\n            },\n            {\n                \"id\": 41,\n                \"name\": \"Cruise\"\n            },\n            {\n                \"id\": 42,\n                \"name\": \"Holiday Park\"\n            }\n        ],\n        \"next_page\": {}\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Autosuggest",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/autosuggest?term=beach&types[]=city_en_us&limit=10",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "autosuggest"
+          ],
+          "query": [
+            {
+              "key": "term",
+              "value": "beach"
+            },
+            {
+              "key": "types[]",
+              "value": "city_en_us"
+            },
+            {
+              "key": "limit",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Autosuggest",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/autosuggest?term=beach&types[]=city_en_us&limit=10",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "autosuggest"
+              ],
+              "query": [
+                {
+                  "key": "term",
+                  "value": "beach"
+                },
+                {
+                  "key": "types[]",
+                  "value": "city_en_us"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Mon, 02 Dec 2019 03:36:18 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "cache-control",
+              "value": "max-age=0, private, must-revalidate"
+            },
+            {
+              "key": "x-request-id",
+              "value": "34840cb278ec3c90e351ee6ab7f363bd"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"results\": {\n        \"city_en_us\": [\n            {\n                \"data\": {\n                    \"display_type\": \"city\",\n                    \"latitude\": 42.700363794152935,\n                    \"longitude\": 27.7056406551095,\n                    \"region_id\": \"6047710\",\n                    \"zumata_hotel_count\": 638\n                },\n                \"id\": \"6047710\",\n                \"score\": 638,\n                \"term\": \"Sunny Beach, Bulgaria\"\n            },\n            {\n                \"data\": {\n                    \"display_type\": \"city\",\n                    \"latitude\": 25.806588700692007,\n                    \"longitude\": -80.14365412014615,\n                    \"region_id\": \"8833\",\n                    \"zumata_hotel_count\": 435\n                },\n                \"id\": \"8833\",\n                \"score\": 435,\n                \"term\": \"Miami Beach, Florida, United States of America\"\n            },\n            {\n                \"data\": {\n                    \"display_type\": \"city\",\n                    \"latitude\": 29.28650533429806,\n                    \"longitude\": -81.18498855288406,\n                    \"region_id\": \"6023995\",\n                    \"zumata_hotel_count\": 429\n                },\n                \"id\": \"6023995\",\n                \"score\": 429,\n                \"term\": \"Daytona Beach (and vicinity), Florida, United States of America\"\n            },\n            {\n                \"data\": {\n                    \"display_type\": \"city\",\n                    \"latitude\": 33.550058735057846,\n                    \"longitude\": -79.15903757255515,\n                    \"region_id\": \"601685\",\n                    \"zumata_hotel_count\": 382\n                },\n                \"id\": \"601685\",\n                \"score\": 382,\n                \"term\": \"Myrtle Beach (and vicinity), South Carolina, United States of America\"\n            },\n            {\n                \"data\": {\n                    \"display_type\": \"city\",\n                    \"latitude\": 25.78206272772736,\n                    \"longitude\": -80.13437302224577,\n                    \"region_id\": \"6138745\",\n                    \"zumata_hotel_count\": 290\n                },\n                \"id\": \"6138745\",\n                \"score\": 290,\n                \"term\": \"South Beach, Miami Beach, Florida, United States of America\"\n            },\n            {\n                \"data\": {\n                    \"display_type\": \"city\",\n                    \"latitude\": 12.237063630113612,\n                    \"longitude\": 109.19682306969406,\n                    \"region_id\": \"553248633981709361\",\n                    \"zumata_hotel_count\": 273\n                },\n                \"id\": \"553248633981709361\",\n                \"score\": 273,\n                \"term\": \"Tran Phu Beach, Vietnam\"\n            },\n            {\n                \"data\": {\n                    \"display_type\": \"city\",\n                    \"latitude\": 36.753142433672544,\n                    \"longitude\": -76.37613781817795,\n                    \"region_id\": \"602904\",\n                    \"zumata_hotel_count\": 248\n                },\n                \"id\": \"602904\",\n                \"score\": 248,\n                \"term\": \"Norfolk - Virginia Beach (and vicinity), Virginia, United States of America\"\n            },\n            {\n                \"data\": {\n                    \"display_type\": \"city\",\n                    \"latitude\": 33.72462407153159,\n                    \"longitude\": -78.89765566372868,\n                    \"region_id\": \"2491\",\n                    \"zumata_hotel_count\": 232\n                },\n                \"id\": \"2491\",\n                \"score\": 232,\n                \"term\": \"Myrtle Beach, South Carolina, United States of America\"\n            },\n            {\n                \"data\": {\n                    \"display_type\": \"city\",\n                    \"latitude\": 30.449808638872454,\n                    \"longitude\": -86.27099137143355,\n                    \"region_id\": \"6023392\",\n                    \"zumata_hotel_count\": 194\n                },\n                \"id\": \"6023392\",\n                \"score\": 194,\n                \"term\": \"Fort Walton Beach - Destin (and vicinity), Florida, United States of America\"\n            },\n            {\n                \"data\": {\n                    \"display_type\": \"city\",\n                    \"latitude\": 26.45102039110289,\n                    \"longitude\": -81.93121314683697,\n                    \"region_id\": \"7194\",\n                    \"zumata_hotel_count\": 189\n                },\n                \"id\": \"7194\",\n                \"score\": 189,\n                \"term\": \"Fort Myers Beach, Florida, United States of America\"\n            }\n        ]\n    },\n    \"term\": \"beach\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Geo Radius",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/geo-radius/hotels/1.345010/103.983208/10000",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "geo-radius",
+            "hotels",
+            "1.345010",
+            "103.983208",
+            "10000"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Geo Radius",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/geo-radius/hotels/1.345010/103.983208/10000",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "geo-radius",
+                "hotels",
+                "1.345010",
+                "103.983208",
+                "10000"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Mon, 02 Dec 2019 03:39:28 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "cache-control",
+              "value": "max-age=0, private, must-revalidate"
+            },
+            {
+              "key": "x-request-id",
+              "value": "4081a5e11e960dae83308c36bebdfd79"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"distance\": 2424.99266922,\n        \"id\": \"1Z6R\",\n        \"latitude\": 1.334396,\n        \"longitude\": 103.96414\n    },\n    {\n        \"distance\": 2372.76334684,\n        \"id\": \"zXRb\",\n        \"latitude\": 1.335898,\n        \"longitude\": 103.963905\n    },\n    {\n        \"distance\": 4628.72068516,\n        \"id\": \"0lcl\",\n        \"latitude\": 1.37897,\n        \"longitude\": 103.95889\n    },\n    {\n        \"distance\": 1791.11789244,\n        \"id\": \"nZTZ\",\n        \"latitude\": 1.35944,\n        \"longitude\": 103.99052\n    },\n    {\n        \"distance\": 1791.11789244,\n        \"id\": \"AfAE\",\n        \"latitude\": 1.35944,\n        \"longitude\": 103.99052\n    },\n    {\n        \"distance\": 9896.9810654,\n        \"id\": \"JKiJ\",\n        \"latitude\": 1.303401,\n        \"longitude\": 103.904472\n    },\n    {\n        \"distance\": 9813.85842844,\n        \"id\": \"eWQU\",\n        \"latitude\": 1.30551,\n        \"longitude\": 103.90424\n    },\n    {\n        \"distance\": 9824.26906468,\n        \"id\": \"c4Lp\",\n        \"latitude\": 1.30542,\n        \"longitude\": 103.90418\n    },\n    {\n        \"distance\": 9829.75474802,\n        \"id\": \"y7XA\",\n        \"latitude\": 1.309704,\n        \"longitude\": 103.902147\n    },\n    {\n        \"distance\": 9864.17627313,\n        \"id\": \"NsWr\",\n        \"latitude\": 1.311505,\n        \"longitude\": 103.901062\n    },\n    {\n        \"distance\": 9898.6420759,\n        \"id\": \"FkVS\",\n        \"latitude\": 1.3117,\n        \"longitude\": 103.90065\n    },\n    {\n        \"distance\": 9907.26161586,\n        \"id\": \"IqwD\",\n        \"latitude\": 1.312347,\n        \"longitude\": 103.900312\n    },\n    {\n        \"distance\": 1293.71497342,\n        \"id\": \"atH8\",\n        \"latitude\": 1.35647,\n        \"longitude\": 103.98555\n    },\n    {\n        \"distance\": 5034.82114289,\n        \"id\": \"VLjS\",\n        \"latitude\": 1.39045,\n        \"longitude\": 103.9861\n    },\n    {\n        \"distance\": 1930.73792263,\n        \"id\": \"dhXv\",\n        \"latitude\": 1.36106,\n        \"longitude\": 103.99004\n    },\n    {\n        \"distance\": 4923.81688066,\n        \"id\": \"NMoy\",\n        \"latitude\": 1.389034,\n        \"longitude\": 103.976562\n    },\n    {\n        \"distance\": 4851.9474984,\n        \"id\": \"REzZ\",\n        \"latitude\": 1.3886,\n        \"longitude\": 103.97821\n    },\n    {\n        \"distance\": 1053.92737657,\n        \"id\": \"YwiE\",\n        \"latitude\": 1.35398,\n        \"longitude\": 103.98641\n    },\n    {\n        \"distance\": 1949.48328463,\n        \"id\": \"yWXV\",\n        \"latitude\": 1.36124,\n        \"longitude\": 103.99005\n    },\n    {\n        \"distance\": 4907.94125692,\n        \"id\": \"QbrK\",\n        \"latitude\": 1.38889,\n        \"longitude\": 103.97657\n    },\n    {\n        \"distance\": 5172.86551707,\n        \"id\": \"B9f4\",\n        \"latitude\": 1.39168,\n        \"longitude\": 103.98\n    },\n    {\n        \"distance\": 1603.14877832,\n        \"id\": \"ETru\",\n        \"latitude\": 1.3583193,\n        \"longitude\": 103.9889212\n    },\n    {\n        \"distance\": 9588.72642604,\n        \"id\": \"XFQ9\",\n        \"latitude\": 1.306788,\n        \"longitude\": 103.905869\n    },\n    {\n        \"distance\": 9735.80246725,\n        \"id\": \"cpfQ\",\n        \"latitude\": 1.39698,\n        \"longitude\": 103.91259\n    },\n    {\n        \"distance\": 7747.35080818,\n        \"id\": \"ZJ2Q\",\n        \"latitude\": 1.31182,\n        \"longitude\": 103.9219\n    },\n    {\n        \"distance\": 8356.28228989,\n        \"id\": \"WVh4\",\n        \"latitude\": 1.32024,\n        \"longitude\": 103.91227\n    },\n    {\n        \"distance\": 8463.02146895,\n        \"id\": \"NCb4\",\n        \"latitude\": 1.31872,\n        \"longitude\": 103.91179\n    },\n    {\n        \"distance\": 9210.30324448,\n        \"id\": \"8jsx\",\n        \"latitude\": 1.39461,\n        \"longitude\": 103.91672\n    },\n    {\n        \"distance\": 8876.7752831,\n        \"id\": \"09uu\",\n        \"latitude\": 1.3089,\n        \"longitude\": 103.91197\n    },\n    {\n        \"distance\": 3299.57637412,\n        \"id\": \"c0ya\",\n        \"latitude\": 1.336788,\n        \"longitude\": 103.954707\n    },\n    {\n        \"distance\": 4900.05782565,\n        \"id\": \"tmNc\",\n        \"latitude\": 1.378715,\n        \"longitude\": 103.954622\n    },\n    {\n        \"distance\": 4725.66193734,\n        \"id\": \"sDgq\",\n        \"latitude\": 1.379616,\n        \"longitude\": 103.958291\n    },\n    {\n        \"distance\": 8051.72704859,\n        \"id\": \"8dS6\",\n        \"latitude\": 1.30408,\n        \"longitude\": 103.92337\n    },\n    {\n        \"distance\": 7680.55343234,\n        \"id\": \"o8e2\",\n        \"latitude\": 1.31188,\n        \"longitude\": 103.92255\n    },\n    {\n        \"distance\": 9258.08161917,\n        \"id\": \"9BMx\",\n        \"latitude\": 1.313572,\n        \"longitude\": 103.906106\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Region",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/region/41/zumata_hotels",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "region",
+            "41",
+            "zumata_hotels"
+          ]
+        },
+        "description": "Retrieves the Zumata hotel id’s associated with a region_id."
+      },
+      "response": [
+        {
+          "name": "Region",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/region/41/zumata_hotels",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "region",
+                "41",
+                "zumata_hotels"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Date",
+              "value": "Mon, 02 Dec 2019 03:47:00 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept-Encoding"
+            },
+            {
+              "key": "cache-control",
+              "value": "max-age=0, private, must-revalidate"
+            },
+            {
+              "key": "x-request-id",
+              "value": "fde6ab130a9fea0f93a0b6fbe601f3cd"
+            },
+            {
+              "key": "Content-Encoding",
+              "value": "gzip"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    \"wZbm\",\n    \"uap9\",\n    \"ji2A\",\n    \"IdS3\",\n    \"afN7\",\n    \"b8Rd\",\n    \"FT8k\",\n    \"ffha\",\n    \"Wugz\",\n    \"WRPH\",\n    \"dW7D\",\n    \"zw4V\",\n    \"tyMj\",\n    \"wFP4\",\n    \"74ES\",\n    \"QWyc\",\n    \"717F\",\n    \"cQdD\",\n    \"qIqP\",\n    \"t4bK\",\n    \"fdwV\",\n    \"OgyU\",\n    \"qqk8\",\n    \"bU7R\",\n    \"mb8Q\",\n    \"R8M3\",\n    \"6rik\",\n    \"aTxN\",\n    \"w0Wu\",\n    \"4F6h\",\n    \"sfnc\",\n    \"pAlP\",\n    \"h6VW\",\n    \"rH1d\",\n    \"ulq9\",\n    \"Vldo\",\n    \"YYYl\",\n    \"1FCA\",\n    \"FfxD\",\n    \"JVX5\",\n    \"5aqB\",\n    \"Yjs4\",\n    \"7FPJ\",\n    \"WRpT\",\n    \"KtXk\",\n    \"pPjV\",\n    \"sb9f\",\n    \"Q8Xy\",\n    \"88OZ\",\n    \"QkhU\",\n    \"qco8\",\n    \"twH9\",\n    \"soPm\",\n    \"zPTB\",\n    \"2sDq\",\n    \"VVjQ\",\n    \"jJwW\",\n    \"nP2b\",\n    \"Q4Mr\",\n    \"X2Xj\",\n    \"jTnP\",\n    \"YgTf\",\n    \"PXdn\",\n    \"PtRH\",\n    \"aZIk\",\n    \"YOW0\",\n    \"9jJb\",\n    \"kHy5\",\n    \"goHk\",\n    \"Edrc\",\n    \"hdsv\",\n    \"Cwz3\",\n    \"1rfT\",\n    \"imON\",\n    \"1HXA\",\n    \"YhZ4\",\n    \"FlDb\",\n    \"zQgu\",\n    \"RbAb\",\n    \"5p4R\",\n    \"s0ZB\",\n    \"z7xK\",\n    \"BWLG\",\n    \"Wtsv\",\n    \"CRWP\",\n    \"dxqg\",\n    \"jnPD\",\n    \"HwSz\",\n    \"X7Zk\",\n    \"0Sxs\",\n    \"gdnp\",\n    \"5SzT\",\n    \"NFt3\",\n    \"vcQ6\",\n    \"Sntf\",\n    \"nCns\",\n    \"6iD6\",\n    \"8Xmv\",\n    \"zbhn\",\n    \"SbCP\",\n    \"PtqI\",\n    \"p9Qj\",\n    \"tQUX\",\n    \"Lvtr\",\n    \"u6dh\",\n    \"4Z8n\",\n    \"6shn\",\n    \"2y6V\",\n    \"wsBm\"\n]"
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-Api-Key",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "[insert your API key here]",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "377baf28-3130-4c51-b194-e294ebab5a31",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "d68784f7-a607-488e-8a25-cd19fc649762",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "76bd669f-f009-41b7-8ec6-3e5a4f4fe9d6",
+      "key": "url",
+      "value": "http://data.zumata.com",
+      "type": "string"
+    }
+  ],
+  "protocolProfileBehavior": {}
+}

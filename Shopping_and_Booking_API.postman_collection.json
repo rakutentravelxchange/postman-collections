@@ -1,0 +1,1080 @@
+{
+  "info": {
+    "_postman_id": "007ef65c-260c-44d1-b1ea-9305f07575c7",
+    "name": "Shopping & Booking API",
+    "description": "formerly known as Zeus\n\n* search/availability checking\n* book\n* cancel\n\nView documentation: http://dev.zumata.com/zeus/index.html",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Search",
+      "item": [
+        {
+          "name": "Hotel List",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "X-Session",
+                "value": "{{session_id}}",
+                "description": "Session ID is used to group related operations together.",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/hotel_list?hotel_id_list=PLPo,XNVf,dnhy,kLxE,09uu,9CPH,BlKz,K5Rm,8Ycj,NBUd&adult_count=2&check_in_date=2020-05-01&check_out_date=2020-05-02&room_count=1&currency=USD",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "hotel_list"
+              ],
+              "query": [
+                {
+                  "key": "hotel_id_list",
+                  "value": "PLPo,XNVf,dnhy,kLxE,09uu,9CPH,BlKz,K5Rm,8Ycj,NBUd"
+                },
+                {
+                  "key": "adult_count",
+                  "value": "2"
+                },
+                {
+                  "key": "check_in_date",
+                  "value": "2020-05-01"
+                },
+                {
+                  "key": "check_out_date",
+                  "value": "2020-05-02"
+                },
+                {
+                  "key": "room_count",
+                  "value": "1"
+                },
+                {
+                  "key": "currency",
+                  "value": "USD"
+                }
+              ]
+            },
+            "description": "Retrieves the list of hotels with rate from a selected package (lowest price), based on a list of hotel IDs."
+          },
+          "response": [
+            {
+              "name": "Hotel List",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "X-Session",
+                    "value": "{{session_id}}",
+                    "description": "Session ID is used to group related operations together.",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/hotel_list?hotel_id_list=PLPo,XNVf,dnhy,kLxE,09uu,9CPH,BlKz,K5Rm,8Ycj,NBUd&adult_count=2&check_in_date=2020-01-01&check_out_date=2020-01-02&room_count=1&currency=USD",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "hotel_list"
+                  ],
+                  "query": [
+                    {
+                      "key": "hotel_id_list",
+                      "value": "PLPo,XNVf,dnhy,kLxE,09uu,9CPH,BlKz,K5Rm,8Ycj,NBUd"
+                    },
+                    {
+                      "key": "adult_count",
+                      "value": "2"
+                    },
+                    {
+                      "key": "check_in_date",
+                      "value": "2020-01-01"
+                    },
+                    {
+                      "key": "check_out_date",
+                      "value": "2020-01-02"
+                    },
+                    {
+                      "key": "room_count",
+                      "value": "1"
+                    },
+                    {
+                      "key": "currency",
+                      "value": "USD"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, must-revalidate"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 29 Nov 2019 07:29:42 GMT"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "Alt-Svc",
+                  "value": "clear"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"session_id\": \"5d66fd256b674ca69cb38964cd35dbe4\",\n    \"event_id\": \"96f311aec6805bd4d42217a93b070007\",\n    \"status\": \"complete\",\n    \"search\": {\n        \"hotel_id_list\": [\n            \"09uu\",\n            \"9CPH\",\n            \"NBUd\",\n            \"PLPo\",\n            \"kLxE\",\n            \"BlKz\",\n            \"K5Rm\",\n            \"8Ycj\",\n            \"XNVf\",\n            \"dnhy\"\n        ],\n        \"check_in_date\": \"2020-01-01\",\n        \"check_out_date\": \"2020-01-02\",\n        \"room_count\": 1,\n        \"adult_count\": 2,\n        \"currency\": \"USD\",\n        \"locale\": \"en-US\",\n        \"children\": null\n    },\n    \"hotels\": [\n        {\n            \"id\": \"PLPo\",\n            \"rates\": {\n                \"packages\": [\n                    {\n                        \"hotel_id\": \"PLPo\",\n                        \"room_details\": {\n                            \"room_code\": \"01001510\",\n                            \"rate_plan_code\": \"1000\",\n                            \"description\": \"Standard Room Queen Bed\",\n                            \"food\": 1,\n                            \"room_type\": \"Standard\",\n                            \"room_view\": \"\",\n                            \"beds\": {\n                                \"queen\": 1\n                            },\n                            \"supplier_description\": \"Standard - 1 Queen Bed\"\n                        },\n                        \"booking_key\": \"831055fe\",\n                        \"room_rate\": 102.78,\n                        \"room_rate_currency\": \"USD\",\n                        \"client_commission\": 5.14,\n                        \"client_commission_currency\": \"USD\",\n                        \"chargeable_rate\": 107.92,\n                        \"chargeable_rate_currency\": \"USD\",\n                        \"indicative_market_rates\": [\n                            {\n                                \"market_rate\": 101.75,\n                                \"market_rate_currency\": \"USD\",\n                                \"market_rate_supplier\": \"snt\",\n                                \"market_rate_supplier_name\": \"\",\n                                \"market_rate_supplier_logo_url\": \"\",\n                                \"market_description\": \"\",\n                                \"market_supplier_description\": \"\",\n                                \"market_non_refundable\": false,\n                                \"food\": 0\n                            }\n                        ],\n                        \"rate_type\": \"net\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": \"dnhy\",\n            \"rates\": {\n                \"packages\": [\n                    {\n                        \"hotel_id\": \"dnhy\",\n                        \"room_details\": {\n                            \"room_code\": \"01001510\",\n                            \"rate_plan_code\": \"1000\",\n                            \"description\": \"Standard Room Queen Bed\",\n                            \"food\": 1,\n                            \"room_type\": \"Standard\",\n                            \"room_view\": \"\",\n                            \"beds\": {\n                                \"queen\": 1\n                            },\n                            \"supplier_description\": \"Standard - 1 Queen Bed\"\n                        },\n                        \"booking_key\": \"979c086e\",\n                        \"room_rate\": 102.78,\n                        \"room_rate_currency\": \"USD\",\n                        \"client_commission\": 5.14,\n                        \"client_commission_currency\": \"USD\",\n                        \"chargeable_rate\": 107.92,\n                        \"chargeable_rate_currency\": \"USD\",\n                        \"indicative_market_rates\": [\n                            {\n                                \"market_rate\": 101.75,\n                                \"market_rate_currency\": \"USD\",\n                                \"market_rate_supplier\": \"snt\",\n                                \"market_rate_supplier_name\": \"\",\n                                \"market_rate_supplier_logo_url\": \"\",\n                                \"market_description\": \"\",\n                                \"market_supplier_description\": \"\",\n                                \"market_non_refundable\": false,\n                                \"food\": 0\n                            }\n                        ],\n                        \"rate_type\": \"net\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": \"kLxE\",\n            \"rates\": {\n                \"packages\": [\n                    {\n                        \"hotel_id\": \"kLxE\",\n                        \"room_details\": {\n                            \"room_code\": \"01001510\",\n                            \"rate_plan_code\": \"2000\",\n                            \"description\": \"Standard Room Queen Bed\",\n                            \"food\": 2,\n                            \"room_type\": \"Standard\",\n                            \"room_view\": \"\",\n                            \"beds\": {\n                                \"queen\": 1\n                            },\n                            \"supplier_description\": \"Standard - 1 Queen Bed\"\n                        },\n                        \"booking_key\": \"158b8a84\",\n                        \"room_rate\": 122.98,\n                        \"room_rate_currency\": \"USD\",\n                        \"client_commission\": 6.15,\n                        \"client_commission_currency\": \"USD\",\n                        \"chargeable_rate\": 129.13,\n                        \"chargeable_rate_currency\": \"USD\",\n                        \"indicative_market_rates\": [\n                            {\n                                \"market_rate\": 121.75,\n                                \"market_rate_currency\": \"USD\",\n                                \"market_rate_supplier\": \"snt\",\n                                \"market_rate_supplier_name\": \"\",\n                                \"market_rate_supplier_logo_url\": \"\",\n                                \"market_description\": \"\",\n                                \"market_supplier_description\": \"\",\n                                \"market_non_refundable\": false,\n                                \"food\": 0\n                            }\n                        ],\n                        \"rate_type\": \"net\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": \"09uu\",\n            \"rates\": {\n                \"packages\": [\n                    {\n                        \"hotel_id\": \"09uu\",\n                        \"room_details\": {\n                            \"room_code\": \"01001510\",\n                            \"rate_plan_code\": \"3000\",\n                            \"description\": \"Standard Room Queen Bed\",\n                            \"food\": 3,\n                            \"room_type\": \"Standard\",\n                            \"room_view\": \"\",\n                            \"beds\": {\n                                \"queen\": 1\n                            },\n                            \"supplier_description\": \"Standard - 1 Queen Bed\"\n                        },\n                        \"booking_key\": \"524f1c5b\",\n                        \"room_rate\": 133.09,\n                        \"room_rate_currency\": \"USD\",\n                        \"client_commission\": 6.65,\n                        \"client_commission_currency\": \"USD\",\n                        \"chargeable_rate\": 139.74,\n                        \"chargeable_rate_currency\": \"USD\",\n                        \"indicative_market_rates\": [\n                            {\n                                \"market_rate\": 131.75,\n                                \"market_rate_currency\": \"USD\",\n                                \"market_rate_supplier\": \"snt\",\n                                \"market_rate_supplier_name\": \"\",\n                                \"market_rate_supplier_logo_url\": \"\",\n                                \"market_description\": \"\",\n                                \"market_supplier_description\": \"\",\n                                \"market_non_refundable\": false,\n                                \"food\": 0\n                            }\n                        ],\n                        \"rate_type\": \"net\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": \"XNVf\",\n            \"rates\": {\n                \"packages\": [\n                    {\n                        \"hotel_id\": \"XNVf\",\n                        \"room_details\": {\n                            \"room_code\": \"01001510\",\n                            \"rate_plan_code\": \"3000\",\n                            \"description\": \"Standard Room Queen Bed\",\n                            \"food\": 3,\n                            \"room_type\": \"Standard\",\n                            \"room_view\": \"\",\n                            \"beds\": {\n                                \"queen\": 1\n                            },\n                            \"supplier_description\": \"Standard - 1 Queen Bed\"\n                        },\n                        \"booking_key\": \"448ac6c5\",\n                        \"room_rate\": 133.09,\n                        \"room_rate_currency\": \"USD\",\n                        \"client_commission\": 6.65,\n                        \"client_commission_currency\": \"USD\",\n                        \"chargeable_rate\": 139.74,\n                        \"chargeable_rate_currency\": \"USD\",\n                        \"indicative_market_rates\": [\n                            {\n                                \"market_rate\": 131.75,\n                                \"market_rate_currency\": \"USD\",\n                                \"market_rate_supplier\": \"snt\",\n                                \"market_rate_supplier_name\": \"\",\n                                \"market_rate_supplier_logo_url\": \"\",\n                                \"market_description\": \"\",\n                                \"market_supplier_description\": \"\",\n                                \"market_non_refundable\": false,\n                                \"food\": 0\n                            }\n                        ],\n                        \"rate_type\": \"net\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": \"8Ycj\",\n            \"rates\": {\n                \"packages\": [\n                    {\n                        \"hotel_id\": \"8Ycj\",\n                        \"room_details\": {\n                            \"room_code\": \"01001010\",\n                            \"rate_plan_code\": \"2200\",\n                            \"description\": \"Standard Room Double Or Twin Bed\",\n                            \"food\": 2,\n                            \"non_refundable\": false,\n                            \"room_type\": \"Standard\",\n                            \"room_view\": \"\",\n                            \"beds\": {\n                                \"double or twin\": 1\n                            },\n                            \"supplier_description\": \"Twin/Double room\"\n                        },\n                        \"booking_key\": \"a8c16483\",\n                        \"room_rate\": 136.41,\n                        \"room_rate_currency\": \"USD\",\n                        \"client_commission\": 57.44,\n                        \"client_commission_currency\": \"USD\",\n                        \"chargeable_rate\": 193.85,\n                        \"chargeable_rate_currency\": \"USD\",\n                        \"indicative_market_rates\": [\n                            {\n                                \"market_rate\": 193.85,\n                                \"market_rate_currency\": \"USD\",\n                                \"market_rate_supplier\": \"snt\",\n                                \"market_rate_supplier_name\": \"\",\n                                \"market_rate_supplier_logo_url\": \"\",\n                                \"market_description\": \"\",\n                                \"market_supplier_description\": \"\",\n                                \"market_non_refundable\": false,\n                                \"food\": 0\n                            }\n                        ],\n                        \"rate_type\": \"net\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": \"9CPH\",\n            \"rates\": {\n                \"packages\": [\n                    {\n                        \"hotel_id\": \"9CPH\",\n                        \"room_details\": {\n                            \"room_code\": \"01001510\",\n                            \"rate_plan_code\": \"6000\",\n                            \"description\": \"Standard Room Queen Bed\",\n                            \"food\": 6,\n                            \"room_type\": \"Standard\",\n                            \"room_view\": \"\",\n                            \"beds\": {\n                                \"queen\": 1\n                            },\n                            \"supplier_description\": \"Standard - 1 Queen Bed\"\n                        },\n                        \"booking_key\": \"39f365e9\",\n                        \"room_rate\": 163.39,\n                        \"room_rate_currency\": \"USD\",\n                        \"client_commission\": 8.17,\n                        \"client_commission_currency\": \"USD\",\n                        \"chargeable_rate\": 171.56,\n                        \"chargeable_rate_currency\": \"USD\",\n                        \"indicative_market_rates\": [\n                            {\n                                \"market_rate\": 161.75,\n                                \"market_rate_currency\": \"USD\",\n                                \"market_rate_supplier\": \"snt\",\n                                \"market_rate_supplier_name\": \"\",\n                                \"market_rate_supplier_logo_url\": \"\",\n                                \"market_description\": \"\",\n                                \"market_supplier_description\": \"\",\n                                \"market_non_refundable\": false,\n                                \"food\": 0\n                            }\n                        ],\n                        \"rate_type\": \"net\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": \"BlKz\",\n            \"rates\": {\n                \"packages\": [\n                    {\n                        \"hotel_id\": \"BlKz\",\n                        \"room_details\": {\n                            \"room_code\": \"01001510\",\n                            \"rate_plan_code\": \"6000\",\n                            \"description\": \"Standard Room Queen Bed\",\n                            \"food\": 6,\n                            \"room_type\": \"Standard\",\n                            \"room_view\": \"\",\n                            \"beds\": {\n                                \"queen\": 1\n                            },\n                            \"supplier_description\": \"Standard - 1 Queen Bed\"\n                        },\n                        \"booking_key\": \"e616be16\",\n                        \"room_rate\": 163.39,\n                        \"room_rate_currency\": \"USD\",\n                        \"client_commission\": 8.17,\n                        \"client_commission_currency\": \"USD\",\n                        \"chargeable_rate\": 171.56,\n                        \"chargeable_rate_currency\": \"USD\",\n                        \"indicative_market_rates\": [\n                            {\n                                \"market_rate\": 161.75,\n                                \"market_rate_currency\": \"USD\",\n                                \"market_rate_supplier\": \"snt\",\n                                \"market_rate_supplier_name\": \"\",\n                                \"market_rate_supplier_logo_url\": \"\",\n                                \"market_description\": \"\",\n                                \"market_supplier_description\": \"\",\n                                \"market_non_refundable\": false,\n                                \"food\": 0\n                            }\n                        ],\n                        \"rate_type\": \"net\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": \"K5Rm\",\n            \"rates\": {\n                \"packages\": [\n                    {\n                        \"hotel_id\": \"K5Rm\",\n                        \"room_details\": {\n                            \"room_code\": \"03001310\",\n                            \"rate_plan_code\": \"2210\",\n                            \"description\": \"Superior Room King Bed\",\n                            \"food\": 2,\n                            \"non_refundable\": false,\n                            \"room_type\": \"Superior\",\n                            \"room_view\": \"\",\n                            \"beds\": {\n                                \"king\": 1\n                            },\n                            \"supplier_description\": \"Superior - 1 King Bed\"\n                        },\n                        \"booking_key\": \"043e938b\",\n                        \"room_rate\": 261.8,\n                        \"room_rate_currency\": \"USD\",\n                        \"client_commission\": 5.1,\n                        \"client_commission_currency\": \"USD\",\n                        \"chargeable_rate\": 266.9,\n                        \"chargeable_rate_currency\": \"USD\",\n                        \"indicative_market_rates\": [\n                            {\n                                \"market_rate\": 266.9,\n                                \"market_rate_currency\": \"USD\",\n                                \"market_rate_supplier\": \"snt\",\n                                \"market_rate_supplier_name\": \"\",\n                                \"market_rate_supplier_logo_url\": \"\",\n                                \"market_description\": \"\",\n                                \"market_supplier_description\": \"\",\n                                \"market_non_refundable\": false,\n                                \"food\": 0\n                            }\n                        ],\n                        \"rate_type\": \"commissionable\"\n                    }\n                ]\n            }\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Hotel Rooms",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "ac8c016f-1dc2-4d04-be27-84b9e91deb2d",
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "description": "Session ID is used to group related operations together.",
+                "key": "X-Session",
+                "type": "text",
+                "value": "{{session_id}}"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/hotel_rooms?hotel_id=PLPo&adult_count=2&children=6,8&check_in_date=2020-05-01&check_out_date=2020-05-02&room_count=1&currency=USD&source_market=US",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "hotel_rooms"
+              ],
+              "query": [
+                {
+                  "key": "hotel_id",
+                  "value": "PLPo"
+                },
+                {
+                  "key": "adult_count",
+                  "value": "2"
+                },
+                {
+                  "key": "children",
+                  "value": "6,8"
+                },
+                {
+                  "key": "check_in_date",
+                  "value": "2020-05-01"
+                },
+                {
+                  "key": "check_out_date",
+                  "value": "2020-05-02"
+                },
+                {
+                  "key": "room_count",
+                  "value": "1"
+                },
+                {
+                  "key": "currency",
+                  "value": "USD"
+                },
+                {
+                  "key": "source_market",
+                  "value": "US"
+                }
+              ]
+            },
+            "description": "Retrieves the list of hotels with rate from a selected package (lowest price), based on a list of hotel IDs."
+          },
+          "response": [
+            {
+              "name": "Hotel Rooms 1",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Session ID is used to group related operations together.",
+                    "key": "X-Session",
+                    "type": "text",
+                    "value": "{{session_id}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/hotel_list?hotel_id_list=PLPo&adult_count=1&check_in_date=2020-04-01&check_out_date=2020-04-02&room_count=1&currency=USD&source_market=US",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "hotel_list"
+                  ],
+                  "query": [
+                    {
+                      "key": "hotel_id_list",
+                      "value": "PLPo"
+                    },
+                    {
+                      "key": "adult_count",
+                      "value": "1"
+                    },
+                    {
+                      "key": "children",
+                      "value": "6,8",
+                      "disabled": true
+                    },
+                    {
+                      "key": "check_in_date",
+                      "value": "2020-04-01"
+                    },
+                    {
+                      "key": "check_out_date",
+                      "value": "2020-04-02"
+                    },
+                    {
+                      "key": "room_count",
+                      "value": "1"
+                    },
+                    {
+                      "key": "currency",
+                      "value": "USD"
+                    },
+                    {
+                      "key": "source_market",
+                      "value": "US"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Date",
+                  "value": "Wed, 18 Mar 2020 06:58:44 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=15724800; includeSubDomains"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, must-revalidate"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "x-content-type-options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "x-frame-options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "key": "x-xss-protection",
+                  "value": "1; mode=block"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"session_id\": \"84360017c4ed41d9a2ba04b423185dd3\",\n    \"event_id\": \"26e207f8af51337b704371c6706bad4c\",\n    \"status\": \"complete\",\n    \"search\": {\n        \"hotel_id_list\": [\n            \"PLPo\"\n        ],\n        \"check_in_date\": \"2020-04-01\",\n        \"check_out_date\": \"2020-04-02\",\n        \"room_count\": 1,\n        \"adult_count\": 1,\n        \"currency\": \"USD\",\n        \"locale\": \"en-US\",\n        \"source_market\": \"US\",\n        \"children\": null\n    },\n    \"hotels\": [\n        {\n            \"id\": \"PLPo\",\n            \"rates\": {\n                \"packages\": [\n                    {\n                        \"hotel_id\": \"PLPo\",\n                        \"room_details\": {\n                            \"room_code\": \"01001510\",\n                            \"rate_plan_code\": \"4000\",\n                            \"description\": \"Standard Room Queen Bed\",\n                            \"food\": 4,\n                            \"room_type\": \"Standard\",\n                            \"room_view\": \"\",\n                            \"beds\": {\n                                \"queen\": 1\n                            },\n                            \"supplier_description\": \"Standard - 1 Queen Bed\"\n                        },\n                        \"booking_key\": \"30118ca2\",\n                        \"room_rate\": 143.19,\n                        \"room_rate_currency\": \"USD\",\n                        \"client_commission\": 7.16,\n                        \"client_commission_currency\": \"USD\",\n                        \"chargeable_rate\": 150.35,\n                        \"chargeable_rate_currency\": \"USD\",\n                        \"indicative_market_rates\": [\n                            {\n                                \"market_rate\": 141.75,\n                                \"market_rate_currency\": \"USD\",\n                                \"market_rate_supplier\": \"snt\",\n                                \"market_rate_supplier_name\": \"\",\n                                \"market_rate_supplier_logo_url\": \"\",\n                                \"market_description\": \"\",\n                                \"market_supplier_description\": \"\",\n                                \"market_non_refundable\": false,\n                                \"food\": 0\n                            }\n                        ],\n                        \"rate_type\": \"net\"\n                    }\n                ]\n            }\n        }\n    ]\n}"
+            },
+            {
+              "name": "Hotel Rooms",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Session ID is used to group related operations together.",
+                    "key": "X-Session",
+                    "type": "text",
+                    "value": "{{session_id}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{url}}/hotel_list?hotel_id_list=PLPo&adult_count=2&children=6,8&check_in_date=2020-01-01&check_out_date=2020-01-02&room_count=1&currency=USD&source_market=US",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "hotel_list"
+                  ],
+                  "query": [
+                    {
+                      "key": "hotel_id_list",
+                      "value": "PLPo"
+                    },
+                    {
+                      "key": "adult_count",
+                      "value": "2"
+                    },
+                    {
+                      "key": "children",
+                      "value": "6,8"
+                    },
+                    {
+                      "key": "check_in_date",
+                      "value": "2020-01-01"
+                    },
+                    {
+                      "key": "check_out_date",
+                      "value": "2020-01-02"
+                    },
+                    {
+                      "key": "room_count",
+                      "value": "1"
+                    },
+                    {
+                      "key": "currency",
+                      "value": "USD"
+                    },
+                    {
+                      "key": "source_market",
+                      "value": "US"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, must-revalidate"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 29 Nov 2019 07:31:02 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1079"
+                },
+                {
+                  "key": "Via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "Alt-Svc",
+                  "value": "clear"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"session_id\": \"5d66fd256b674ca69cb38964cd35dbe4\",\n    \"event_id\": \"6acbe301ee478a1a75ba259f724d4c24\",\n    \"status\": \"complete\",\n    \"search\": {\n        \"hotel_id_list\": [\n            \"PLPo\"\n        ],\n        \"check_in_date\": \"2020-01-01\",\n        \"check_out_date\": \"2020-01-02\",\n        \"room_count\": 1,\n        \"adult_count\": 2,\n        \"currency\": \"USD\",\n        \"locale\": \"en-US\",\n        \"source_market\": \"US\",\n        \"children\": [\n            6,\n            8\n        ]\n    },\n    \"hotels\": [\n        {\n            \"id\": \"PLPo\",\n            \"rates\": {\n                \"packages\": [\n                    {\n                        \"hotel_id\": \"PLPo\",\n                        \"room_details\": {\n                            \"room_code\": \"01001520\",\n                            \"rate_plan_code\": \"3000\",\n                            \"description\": \"Standard Room Queen Beds\",\n                            \"food\": 3,\n                            \"room_type\": \"Standard\",\n                            \"room_view\": \"\",\n                            \"beds\": {\n                                \"queen\": 2\n                            },\n                            \"supplier_description\": \"Standard - 2 Queen Bed\"\n                        },\n                        \"booking_key\": \"2b80083f\",\n                        \"room_rate\": 133.09,\n                        \"room_rate_currency\": \"USD\",\n                        \"client_commission\": 6.65,\n                        \"client_commission_currency\": \"USD\",\n                        \"chargeable_rate\": 139.74,\n                        \"chargeable_rate_currency\": \"USD\",\n                        \"indicative_market_rates\": [\n                            {\n                                \"market_rate\": 131.75,\n                                \"market_rate_currency\": \"USD\",\n                                \"market_rate_supplier\": \"snt\",\n                                \"market_rate_supplier_name\": \"\",\n                                \"market_rate_supplier_logo_url\": \"\",\n                                \"market_description\": \"\",\n                                \"market_supplier_description\": \"\",\n                                \"market_non_refundable\": false,\n                                \"food\": 0\n                            }\n                        ],\n                        \"rate_type\": \"net\"\n                    }\n                ]\n            }\n        }\n    ]\n}"
+            }
+          ]
+        }
+      ],
+      "protocolProfileBehavior": {}
+    },
+    {
+      "name": "Booking policy",
+      "item": [
+        {
+          "name": "Generate new booking policy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "85fbc831-718e-4d85-bdbc-a2777aa9ff17",
+                "exec": [
+                  "var data = pm.response.json();",
+                  "pm.collectionVariables.set(\"booking_policy_id\", data.booking_policy_id);",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"search\": {\n        \"hotel_id_list\": [\n            \"PLPo\"\n        ],\n        \"check_in_date\": \"2020-05-01\",\n        \"check_out_date\": \"2020-05-02\",\n        \"room_count\": 1,\n        \"adult_count\": 2,\n        \"currency\": \"USD\",\n        \"locale\": \"en-US\",\n        \"source_market\": \"US\",\n        \"children\": [\n            6,\n            8\n        ]\n    },\n\t\"package\": {\n        \"hotel_id\": \"PLPo\",\n        \"room_details\": {\n            \"room_code\": \"01001520\",\n            \"rate_plan_code\": \"7000\",\n            \"description\": \"Standard Room Queen Beds\",\n            \"food\": 7,\n            \"room_type\": \"Standard\",\n            \"room_view\": \"\",\n            \"beds\": {\n                \"queen\": 2\n            },\n            \"supplier_description\": \"Standard - 2 Queen Bed\"\n        },\n        \"booking_key\": \"5e20e96d\",\n        \"room_rate\": 173.49,\n        \"room_rate_currency\": \"USD\",\n        \"client_commission\": 8.67,\n        \"client_commission_currency\": \"USD\",\n        \"chargeable_rate\": 182.16,\n        \"chargeable_rate_currency\": \"USD\",\n        \"indicative_market_rates\": [\n            {\n                \"market_rate\": 171.75,\n                \"market_rate_currency\": \"USD\",\n                \"market_rate_supplier\": \"snt\",\n                \"market_rate_supplier_name\": \"\",\n                \"market_rate_supplier_logo_url\": \"\",\n                \"market_description\": \"\",\n                \"market_supplier_description\": \"\",\n                \"market_non_refundable\": false,\n                \"food\": 0\n            }\n        ],\n        \"rate_type\": \"net\"\n    }\n}\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/booking_policy",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "booking_policy"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Generate new booking policy",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"search\": {\n        \"hotel_id_list\": [\n            \"PLPo\"\n        ],\n        \"check_in_date\": \"2020-01-01\",\n        \"check_out_date\": \"2020-01-02\",\n        \"room_count\": 1,\n        \"adult_count\": 2,\n        \"currency\": \"USD\",\n        \"locale\": \"en-US\",\n        \"source_market\": \"US\",\n        \"children\": [\n            6,\n            8\n        ]\n    },\n\t\"package\": {\n        \"hotel_id\": \"PLPo\",\n        \"room_details\": {\n            \"room_code\": \"01001520\",\n            \"rate_plan_code\": \"3000\",\n            \"description\": \"Standard Room Queen Beds\",\n            \"food\": 3,\n            \"room_type\": \"Standard\",\n            \"room_view\": \"\",\n            \"beds\": {\n                \"queen\": 2\n            },\n            \"supplier_description\": \"Standard - 2 Queen Bed\"\n        },\n        \"booking_key\": \"2b80083f\",\n        \"room_rate\": 133.09,\n        \"room_rate_currency\": \"USD\",\n        \"client_commission\": 6.65,\n        \"client_commission_currency\": \"USD\",\n        \"chargeable_rate\": 139.74,\n        \"chargeable_rate_currency\": \"USD\",\n        \"indicative_market_rates\": [\n            {\n                \"market_rate\": 131.75,\n                \"market_rate_currency\": \"USD\",\n                \"market_rate_supplier\": \"snt\",\n                \"market_rate_supplier_name\": \"\",\n                \"market_rate_supplier_logo_url\": \"\",\n                \"market_description\": \"\",\n                \"market_supplier_description\": \"\",\n                \"market_non_refundable\": false,\n                \"food\": 0\n            }\n        ],\n        \"rate_type\": \"net\"\n    }\n}\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/booking_policy?",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "booking_policy"
+                  ],
+                  "query": [
+                    {
+                      "key": "",
+                      "value": "",
+                      "disabled": true
+                    }
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 29 Nov 2019 09:50:07 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1091"
+                },
+                {
+                  "key": "Via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "Alt-Svc",
+                  "value": "clear"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"session_id\": \"aac734bc0efb4434a9ae238fc89d45d7\",\n    \"event_id\": \"91d818107264b444b19677d0a1afcc8f\",\n    \"booking_policy_id\": \"38bc449b-9c80-a5e0-7e69-6f1575021007\",\n    \"cancellation_policy\": {\n        \"remarks\": \"Swimming pool will be closed from June 9 to June 20\",\n        \"cancellation_policies\": [\n            {\n                \"penalty_percentage\": 100,\n                \"date_from\": \"2019-11-29T09:50:00Z\",\n                \"date_to\": \"2020-01-02T00:00:00Z\"\n            }\n        ]\n    },\n    \"package\": {\n        \"hotel_id\": \"PLPo\",\n        \"room_details\": {\n            \"room_code\": \"01001520\",\n            \"rate_plan_code\": \"3000\",\n            \"description\": \"Standard Room Queen Beds\",\n            \"food\": 3,\n            \"room_type\": \"Standard\",\n            \"room_view\": \"\",\n            \"beds\": {\n                \"queen\": 2\n            },\n            \"supplier_description\": \"Standard - 2 Queen Bed\"\n        },\n        \"booking_key\": \"2b80083f\",\n        \"room_rate\": 133.09,\n        \"room_rate_currency\": \"USD\",\n        \"client_commission\": 6.65,\n        \"client_commission_currency\": \"USD\",\n        \"chargeable_rate\": 139.74,\n        \"chargeable_rate_currency\": \"USD\",\n        \"indicative_market_rates\": [\n            {\n                \"market_rate\": 131.75,\n                \"market_rate_currency\": \"USD\",\n                \"market_rate_supplier\": \"snt\",\n                \"market_rate_supplier_name\": \"\",\n                \"market_rate_supplier_logo_url\": \"\",\n                \"market_description\": \"\",\n                \"market_supplier_description\": \"\",\n                \"market_non_refundable\": false,\n                \"food\": 0\n            }\n        ],\n        \"rate_type\": \"net\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Retrieve generated booking policy",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/booking_policy/{{booking_policy_id}}",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "booking_policy",
+                "{{booking_policy_id}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Retrieve generated booking policy",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/booking_policy/{{booking_policy_id}}",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "booking_policy",
+                    "{{booking_policy_id}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, must-revalidate"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 29 Nov 2019 09:56:02 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "2033"
+                },
+                {
+                  "key": "Via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "Alt-Svc",
+                  "value": "clear"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"session_id\": \"f7e9c7469c8d45ec933ec3e2202c95ce\",\n    \"event_id\": \"cdb7bd805430425b37c7f1a934c13e09\",\n    \"booking_policy_id\": \"5b71973a-7668-b9d0-6199-1e1575021316\",\n    \"cancellation_policy\": {\n        \"remarks\": \"Swimming pool will be closed from June 9 to June 20\",\n        \"cancellation_policies\": [\n            {\n                \"penalty_percentage\": 100,\n                \"date_from\": \"2019-11-29T09:55:00Z\",\n                \"date_to\": \"2020-01-02T00:00:00Z\"\n            }\n        ]\n    },\n    \"package\": {\n        \"hotel_id\": \"PLPo\",\n        \"room_details\": {\n            \"room_code\": \"01001520\",\n            \"rate_plan_code\": \"3000\",\n            \"description\": \"Standard Room Queen Beds\",\n            \"food\": 3,\n            \"room_type\": \"Standard\",\n            \"room_view\": \"\",\n            \"beds\": {\n                \"queen\": 2\n            },\n            \"supplier_description\": \"Standard - 2 Queen Bed\"\n        },\n        \"booking_key\": \"2b80083f\",\n        \"room_rate\": 133.09,\n        \"room_rate_currency\": \"USD\",\n        \"client_commission\": 6.65,\n        \"client_commission_currency\": \"USD\",\n        \"chargeable_rate\": 139.74,\n        \"chargeable_rate_currency\": \"USD\",\n        \"indicative_market_rates\": [\n            {\n                \"market_rate\": 131.75,\n                \"market_rate_currency\": \"USD\",\n                \"market_rate_supplier\": \"snt\",\n                \"market_rate_supplier_name\": \"\",\n                \"market_rate_supplier_logo_url\": \"\",\n                \"market_description\": \"\",\n                \"market_supplier_description\": \"\",\n                \"market_non_refundable\": false,\n                \"food\": 0\n            }\n        ],\n        \"rate_type\": \"net\"\n    },\n    \"request\": {\n        \"search\": {\n            \"check_in_date\": \"2020-01-01\",\n            \"check_out_date\": \"2020-01-02\",\n            \"room_count\": 1,\n            \"adult_count\": 2,\n            \"currency\": \"USD\",\n            \"locale\": \"en-US\",\n            \"child_count\": 2,\n            \"source_market\": \"US\",\n            \"children\": [\n                6,\n                8\n            ]\n        },\n        \"package\": {\n            \"hotel_id\": \"PLPo\",\n            \"room_details\": {\n                \"room_code\": \"01001520\",\n                \"rate_plan_code\": \"3000\",\n                \"description\": \"Standard Room Queen Beds\",\n                \"food\": 3,\n                \"room_type\": \"Standard\",\n                \"room_view\": \"\",\n                \"beds\": {\n                    \"queen\": 2\n                },\n                \"supplier_description\": \"Standard - 2 Queen Bed\"\n            },\n            \"booking_key\": \"2b80083f\",\n            \"room_rate\": 133.09,\n            \"room_rate_currency\": \"USD\",\n            \"client_commission\": 6.65,\n            \"client_commission_currency\": \"USD\",\n            \"chargeable_rate\": 139.74,\n            \"chargeable_rate_currency\": \"USD\",\n            \"indicative_market_rates\": [\n                {\n                    \"market_rate\": 131.75,\n                    \"market_rate_currency\": \"USD\",\n                    \"market_rate_supplier\": \"snt\",\n                    \"market_rate_supplier_name\": \"\",\n                    \"market_rate_supplier_logo_url\": \"\",\n                    \"market_description\": \"\",\n                    \"market_supplier_description\": \"\",\n                    \"market_non_refundable\": false,\n                    \"food\": 0\n                }\n            ],\n            \"rate_type\": \"net\"\n        },\n        \"config\": null\n    }\n}"
+            }
+          ]
+        }
+      ],
+      "protocolProfileBehavior": {}
+    },
+    {
+      "name": "Booking",
+      "item": [
+        {
+          "name": "Prebook",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "81de37b2-393a-4379-98a5-fe7f22e9dd99",
+                "exec": [
+                  "var data = pm.response.json();",
+                  "pm.collectionVariables.set(\"booking_id\", data.booking_id);",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"booking_policy_id\": \"{{booking_policy_id}}\",\n\t\"client_reference\": \"test\",\n\t\"room_lead_guests\": [\n\t\t{\n\t\t\t\"first_name\": \"First\",\n\t\t\t\"last_name\": \"Last\",\n\t\t\t\"nationality\": \"US\"\n\t\t}\n\t],\n\t\"contact_person\": {\n\t\t\"first_name\": \"First\",\n\t\t\"last_name\": \"Last\",\n\t\t\"nationality\": \"US\",\n\t\t\"contact_no\": \"123\"\n\t}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/pre_book",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "pre_book"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Prebook",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"booking_policy_id\": \"{{booking_policy_id}}\",\n\t\"client_reference\": \"test\",\n\t\"room_lead_guests\": [\n\t\t{\n\t\t\t\"first_name\": \"First\",\n\t\t\t\"last_name\": \"Last\",\n\t\t\t\"nationality\": \"US\"\n\t\t}\n\t],\n\t\"contact_person\": {\n\t\t\"first_name\": \"First\",\n\t\t\"last_name\": \"Last\",\n\t\t\"nationality\": \"US\",\n\t\t\"contact_no\": \"123\"\n\t}\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/pre_book",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "pre_book"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 29 Nov 2019 10:10:38 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1764"
+                },
+                {
+                  "key": "Via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "Alt-Svc",
+                  "value": "clear"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"session_id\": \"d74bb9e9660c4a6b955fd4d49864f248\",\n    \"event_id\": \"600c65100946c7ab020b8e5c3e9fed0c\",\n    \"booking_id\": \"jd0ow13d\",\n    \"client_reference\": \"test\",\n    \"status\": \"bkg-ns\",\n    \"status_payment\": \"pay-ns\",\n    \"requested_at\": \"2019-11-29T10:10:37Z\",\n    \"package\": {\n        \"hotel_id\": \"PLPo\",\n        \"room_details\": {\n            \"room_code\": \"01001520\",\n            \"rate_plan_code\": \"3000\",\n            \"description\": \"Standard Room Queen Beds\",\n            \"food\": 3,\n            \"room_type\": \"Standard\",\n            \"room_view\": \"\",\n            \"beds\": {\n                \"queen\": 2\n            },\n            \"supplier_description\": \"Standard - 2 Queen Bed\"\n        },\n        \"check_in_date\": \"2020-01-01T00:00:00Z\",\n        \"check_out_date\": \"2020-01-02T00:00:00Z\",\n        \"adult_count\": 2,\n        \"room_count\": 1,\n        \"child_count\": 2,\n        \"room_rate\": 133.09,\n        \"room_rate_currency\": \"USD\",\n        \"chargeable_rate\": 139.74,\n        \"chargeable_rate_currency\": \"USD\",\n        \"client_commission\": 6.65,\n        \"client_commission_currency\": \"USD\",\n        \"rate_type\": \"net\",\n        \"taxes_and_fees\": {}\n    },\n    \"guest\": {\n        \"salutation\": \"\",\n        \"first_name\": \"First\",\n        \"last_name\": \"Last\",\n        \"email\": \"\",\n        \"city\": \"\",\n        \"state\": \"\",\n        \"street\": \"\",\n        \"postal_code\": \"\",\n        \"country\": \"\",\n        \"remarks\": \"\",\n        \"nationality\": \"US\",\n        \"contact_no\": \"123\"\n    },\n    \"pricing\": {\n        \"zumata\": {\n            \"currency\": \"USD\",\n            \"value\": 139.74\n        },\n        \"client\": {\n            \"currency\": \"\",\n            \"value\": 0\n        }\n    },\n    \"cancellation_policy\": {\n        \"remarks\": \"Swimming pool will be closed from June 9 to June 20\",\n        \"cancellation_policies\": [\n            {\n                \"penalty_percentage\": 100,\n                \"date_from\": \"2019-11-29T09:55:00Z\",\n                \"date_to\": \"2020-01-02T00:00:00Z\"\n            }\n        ]\n    },\n    \"booking_details\": {\n        \"customer_reference\": \"zbr-50117\",\n        \"customer_booking_id\": \"\"\n    },\n    \"contact_person\": {\n        \"salutation\": \"\",\n        \"first_name\": \"First\",\n        \"last_name\": \"Last\",\n        \"email\": \"\",\n        \"city\": \"\",\n        \"state\": \"\",\n        \"street\": \"\",\n        \"postal_code\": \"\",\n        \"country\": \"\",\n        \"remarks\": \"\",\n        \"nationality\": \"US\",\n        \"contact_no\": \"123\"\n    },\n    \"room_lead_guests\": [\n        {\n            \"salutation\": \"\",\n            \"first_name\": \"First\",\n            \"last_name\": \"Last\",\n            \"nationality\": \"US\",\n            \"remarks\": \"\"\n        }\n    ],\n    \"bundled_booking\": false,\n    \"locale\": \"en-US\",\n    \"source_market\": \"US\",\n    \"is_custom\": false\n}"
+            }
+          ]
+        },
+        {
+          "name": "Book",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/book/{{booking_id}}",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "book",
+                "{{booking_id}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Book",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/book/{{booking_id}}",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "book",
+                    "{{booking_id}}"
+                  ]
+                }
+              },
+              "status": "Accepted",
+              "code": 202,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Location",
+                  "value": "/book/p4x5xwgd/status"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 29 Nov 2019 10:12:13 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1764"
+                },
+                {
+                  "key": "Via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "Alt-Svc",
+                  "value": "clear"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"session_id\": \"8b8b3885817244d5a646539dd575f45a\",\n    \"event_id\": \"57c58d4164c778a445a280061faf2d06\",\n    \"booking_id\": \"p4x5xwgd\",\n    \"client_reference\": \"test\",\n    \"status\": \"bkg-ip\",\n    \"status_payment\": \"acc-rs\",\n    \"requested_at\": \"2019-11-29T10:11:32Z\",\n    \"package\": {\n        \"hotel_id\": \"PLPo\",\n        \"room_details\": {\n            \"room_code\": \"01001520\",\n            \"rate_plan_code\": \"3000\",\n            \"description\": \"Standard Room Queen Beds\",\n            \"food\": 3,\n            \"room_type\": \"Standard\",\n            \"room_view\": \"\",\n            \"beds\": {\n                \"queen\": 2\n            },\n            \"supplier_description\": \"Standard - 2 Queen Bed\"\n        },\n        \"check_in_date\": \"2020-01-01T00:00:00Z\",\n        \"check_out_date\": \"2020-01-02T00:00:00Z\",\n        \"adult_count\": 2,\n        \"room_count\": 1,\n        \"child_count\": 2,\n        \"room_rate\": 133.09,\n        \"room_rate_currency\": \"USD\",\n        \"chargeable_rate\": 139.74,\n        \"chargeable_rate_currency\": \"USD\",\n        \"client_commission\": 6.65,\n        \"client_commission_currency\": \"USD\",\n        \"rate_type\": \"net\",\n        \"taxes_and_fees\": {}\n    },\n    \"guest\": {\n        \"salutation\": \"\",\n        \"first_name\": \"First\",\n        \"last_name\": \"Last\",\n        \"email\": \"\",\n        \"city\": \"\",\n        \"state\": \"\",\n        \"street\": \"\",\n        \"postal_code\": \"\",\n        \"country\": \"\",\n        \"remarks\": \"\",\n        \"nationality\": \"US\",\n        \"contact_no\": \"123\"\n    },\n    \"pricing\": {\n        \"zumata\": {\n            \"currency\": \"USD\",\n            \"value\": 139.74\n        },\n        \"client\": {\n            \"currency\": \"\",\n            \"value\": 0\n        }\n    },\n    \"cancellation_policy\": {\n        \"remarks\": \"Swimming pool will be closed from June 9 to June 20\",\n        \"cancellation_policies\": [\n            {\n                \"penalty_percentage\": 100,\n                \"date_from\": \"2019-11-29T09:55:00Z\",\n                \"date_to\": \"2020-01-02T00:00:00Z\"\n            }\n        ]\n    },\n    \"booking_details\": {\n        \"customer_reference\": \"zbr-50118\",\n        \"customer_booking_id\": \"\"\n    },\n    \"contact_person\": {\n        \"salutation\": \"\",\n        \"first_name\": \"First\",\n        \"last_name\": \"Last\",\n        \"email\": \"\",\n        \"city\": \"\",\n        \"state\": \"\",\n        \"street\": \"\",\n        \"postal_code\": \"\",\n        \"country\": \"\",\n        \"remarks\": \"\",\n        \"nationality\": \"US\",\n        \"contact_no\": \"123\"\n    },\n    \"room_lead_guests\": [\n        {\n            \"salutation\": \"\",\n            \"first_name\": \"First\",\n            \"last_name\": \"Last\",\n            \"nationality\": \"US\",\n            \"remarks\": \"\"\n        }\n    ],\n    \"bundled_booking\": false,\n    \"locale\": \"en-US\",\n    \"source_market\": \"US\",\n    \"is_custom\": false\n}"
+            }
+          ]
+        },
+        {
+          "name": "Booking status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/book/{{booking_id}}/status",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "book",
+                "{{booking_id}}",
+                "status"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Booking status",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/book/{{booking_id}}/status",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "book",
+                    "{{booking_id}}",
+                    "status"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, must-revalidate"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 29 Nov 2019 10:13:11 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1764"
+                },
+                {
+                  "key": "Via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "Alt-Svc",
+                  "value": "clear"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"session_id\": \"39379d4b8bca493799db18f57a3660a5\",\n    \"event_id\": \"9072271af6e429b3e900e8879c216530\",\n    \"booking_id\": \"p4x5xwgd\",\n    \"client_reference\": \"test\",\n    \"status\": \"bkg-ip\",\n    \"status_payment\": \"acc-rs\",\n    \"requested_at\": \"2019-11-29T10:11:32Z\",\n    \"package\": {\n        \"hotel_id\": \"PLPo\",\n        \"room_details\": {\n            \"room_code\": \"01001520\",\n            \"rate_plan_code\": \"3000\",\n            \"description\": \"Standard Room Queen Beds\",\n            \"food\": 3,\n            \"room_type\": \"Standard\",\n            \"room_view\": \"\",\n            \"beds\": {\n                \"queen\": 2\n            },\n            \"supplier_description\": \"Standard - 2 Queen Bed\"\n        },\n        \"check_in_date\": \"2020-01-01T00:00:00Z\",\n        \"check_out_date\": \"2020-01-02T00:00:00Z\",\n        \"adult_count\": 2,\n        \"room_count\": 1,\n        \"child_count\": 2,\n        \"room_rate\": 133.09,\n        \"room_rate_currency\": \"USD\",\n        \"chargeable_rate\": 139.74,\n        \"chargeable_rate_currency\": \"USD\",\n        \"client_commission\": 6.65,\n        \"client_commission_currency\": \"USD\",\n        \"rate_type\": \"net\",\n        \"taxes_and_fees\": {}\n    },\n    \"guest\": {\n        \"salutation\": \"\",\n        \"first_name\": \"First\",\n        \"last_name\": \"Last\",\n        \"email\": \"\",\n        \"city\": \"\",\n        \"state\": \"\",\n        \"street\": \"\",\n        \"postal_code\": \"\",\n        \"country\": \"\",\n        \"remarks\": \"\",\n        \"nationality\": \"US\",\n        \"contact_no\": \"123\"\n    },\n    \"pricing\": {\n        \"zumata\": {\n            \"currency\": \"USD\",\n            \"value\": 139.74\n        },\n        \"client\": {\n            \"currency\": \"\",\n            \"value\": 0\n        }\n    },\n    \"cancellation_policy\": {\n        \"remarks\": \"Swimming pool will be closed from June 9 to June 20\",\n        \"cancellation_policies\": [\n            {\n                \"penalty_percentage\": 100,\n                \"date_from\": \"2019-11-29T09:55:00Z\",\n                \"date_to\": \"2020-01-02T00:00:00Z\"\n            }\n        ]\n    },\n    \"booking_details\": {\n        \"customer_reference\": \"zbr-50118\",\n        \"customer_booking_id\": \"\"\n    },\n    \"contact_person\": {\n        \"salutation\": \"\",\n        \"first_name\": \"First\",\n        \"last_name\": \"Last\",\n        \"email\": \"\",\n        \"city\": \"\",\n        \"state\": \"\",\n        \"street\": \"\",\n        \"postal_code\": \"\",\n        \"country\": \"\",\n        \"remarks\": \"\",\n        \"nationality\": \"US\",\n        \"contact_no\": \"123\"\n    },\n    \"room_lead_guests\": [\n        {\n            \"salutation\": \"\",\n            \"first_name\": \"First\",\n            \"last_name\": \"Last\",\n            \"nationality\": \"US\",\n            \"remarks\": \"\"\n        }\n    ],\n    \"bundled_booking\": false,\n    \"locale\": \"en-US\",\n    \"source_market\": \"US\",\n    \"is_custom\": false\n}"
+            }
+          ]
+        }
+      ],
+      "protocolProfileBehavior": {}
+    },
+    {
+      "name": "Cancellation",
+      "item": [
+        {
+          "name": "Cancel booking",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"booking_id\": \"{{booking_id}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/cancel",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "cancel"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Cancel booking",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"booking_id\": \"{{booking_id}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/cancel",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "cancel"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 29 Nov 2019 10:24:17 GMT"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1974"
+                },
+                {
+                  "key": "Via",
+                  "value": "1.1 google"
+                },
+                {
+                  "key": "Alt-Svc",
+                  "value": "clear"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"session_id\": \"e1e9fcc60e38484c96648c293c227119\",\n    \"event_id\": \"273eb5b53d5441cb6b041195d023510c\",\n    \"booking_id\": \"p4x5xwgd\",\n    \"client_reference\": \"test\",\n    \"status\": \"bkg-cx\",\n    \"status_payment\": \"acc-cx\",\n    \"requested_at\": \"2019-11-29T10:11:32Z\",\n    \"confirmed_at\": \"2019-11-29T10:13:25Z\",\n    \"package\": {\n        \"hotel_id\": \"PLPo\",\n        \"room_details\": {\n            \"room_code\": \"01001520\",\n            \"rate_plan_code\": \"3000\",\n            \"description\": \"Standard Room Queen Beds\",\n            \"food\": 3,\n            \"room_type\": \"Standard\",\n            \"room_view\": \"\",\n            \"beds\": {\n                \"queen\": 2\n            },\n            \"supplier_description\": \"Standard - 2 Queen Bed\"\n        },\n        \"check_in_date\": \"2020-01-01T00:00:00Z\",\n        \"check_out_date\": \"2020-01-02T00:00:00Z\",\n        \"adult_count\": 2,\n        \"room_count\": 1,\n        \"child_count\": 2,\n        \"room_rate\": 133.09,\n        \"room_rate_currency\": \"USD\",\n        \"chargeable_rate\": 139.74,\n        \"chargeable_rate_currency\": \"USD\",\n        \"client_commission\": 6.65,\n        \"client_commission_currency\": \"USD\",\n        \"rate_type\": \"net\",\n        \"taxes_and_fees\": {}\n    },\n    \"guest\": {\n        \"salutation\": \"\",\n        \"first_name\": \"First\",\n        \"last_name\": \"Last\",\n        \"email\": \"\",\n        \"city\": \"\",\n        \"state\": \"\",\n        \"street\": \"\",\n        \"postal_code\": \"\",\n        \"country\": \"\",\n        \"remarks\": \"\",\n        \"nationality\": \"US\",\n        \"contact_no\": \"123\"\n    },\n    \"pricing\": {\n        \"zumata\": {\n            \"currency\": \"USD\",\n            \"value\": 139.74\n        },\n        \"client\": {\n            \"currency\": \"\",\n            \"value\": 0\n        }\n    },\n    \"cancellation_details\": {\n        \"cancelled_at\": \"2019-11-29T10:24:17.404229Z\",\n        \"api_penalty\": {\n            \"currency\": \"USD\",\n            \"value\": 139.74\n        },\n        \"api_penalty_percentage\": 100\n    },\n    \"cancellation_policy\": {\n        \"remarks\": \"Swimming pool will be closed from June 9 to June 20\",\n        \"cancellation_policies\": [\n            {\n                \"penalty_percentage\": 100,\n                \"date_from\": \"2019-11-29T09:55:00Z\",\n                \"date_to\": \"2020-01-02T00:00:00Z\"\n            }\n        ]\n    },\n    \"booking_details\": {\n        \"customer_reference\": \"zbr-50118\",\n        \"customer_booking_id\": \"\"\n    },\n    \"contact_person\": {\n        \"salutation\": \"\",\n        \"first_name\": \"First\",\n        \"last_name\": \"Last\",\n        \"email\": \"\",\n        \"city\": \"\",\n        \"state\": \"\",\n        \"street\": \"\",\n        \"postal_code\": \"\",\n        \"country\": \"\",\n        \"remarks\": \"\",\n        \"nationality\": \"US\",\n        \"contact_no\": \"123\"\n    },\n    \"room_lead_guests\": [\n        {\n            \"salutation\": \"\",\n            \"first_name\": \"First\",\n            \"last_name\": \"Last\",\n            \"nationality\": \"US\",\n            \"remarks\": \"\"\n        }\n    ],\n    \"bundled_booking\": false,\n    \"locale\": \"en-US\",\n    \"source_market\": \"US\",\n    \"is_custom\": false,\n    \"penalty_percentage\": 100\n}"
+            }
+          ]
+        }
+      ],
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "b93643bc-8833-4b43-bac2-aac12564d987",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "a1c1c709-9b20-4b4a-be09-8f6b72f5ace7",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ],
+      "protocolProfileBehavior": {}
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "value",
+        "value": "[insert your API key here]",
+        "type": "string"
+      },
+      {
+        "key": "key",
+        "value": "X-Api-Key",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "59606c20-82b8-41ef-854b-7b306fdcbdc2",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "f1bb5f1e-c496-464e-bcfd-ac04ea5be51c",
+        "type": "text/javascript",
+        "exec": [
+          "var data = pm.response.json();",
+          "pm.collectionVariables.set(\"session_id\", data.session_id);",
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "3183d071-efc1-477b-b06d-8c85334fd04d",
+      "key": "url",
+      "value": "https://test-api-v3.zumata.com",
+      "type": "string"
+    },
+    {
+      "id": "63e5cf58-c451-40c9-97f4-b1255d5b4329",
+      "key": "session_id",
+      "value": "84360017c4ed41d9a2ba04b423185dd3",
+      "type": "string"
+    },
+    {
+      "id": "acd3a739-7ffe-4af3-b4bd-d7d26731f4d7",
+      "key": "booking_policy_id",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "id": "1f37beee-1649-42c5-b488-40fbd354734d",
+      "key": "booking_id",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
