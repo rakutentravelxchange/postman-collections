@@ -1054,7 +1054,7 @@
     {
       "id": "3183d071-efc1-477b-b06d-8c85334fd04d",
       "key": "url",
-      "value": "https://test-api-v3.zumata.com",
+      "value": "https://api-v3.zumata.com",
       "type": "string"
     },
     {
