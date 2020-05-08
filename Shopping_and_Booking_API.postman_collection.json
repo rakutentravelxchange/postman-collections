@@ -22,7 +22,7 @@
               }
             ],
             "url": {
-              "raw": "{{url}}/hotel_list?hotel_id_list=PLPo,XNVf,dnhy,kLxE,09uu,9CPH,BlKz,K5Rm,8Ycj,NBUd&adult_count=2&check_in_date=2020-05-01&check_out_date=2020-05-02&room_count=1&currency=USD",
+              "raw": "{{url}}/hotel_list?hotel_id_list=PLPo,7uLH,dnhy,9CPH,fst1,fst2,TJRf,KQQR,SvBX,pst2,WijN,wijn,reFn,usg1,usj1&adult_count=2&check_in_date=2020-05-01&check_out_date=2020-05-02&room_count=1&currency=USD",
               "host": [
                 "{{url}}"
               ],
@@ -32,7 +32,7 @@
               "query": [
                 {
                   "key": "hotel_id_list",
-                  "value": "PLPo,XNVf,dnhy,kLxE,09uu,9CPH,BlKz,K5Rm,8Ycj,NBUd"
+                  "value": "PLPo,7uLH,dnhy,9CPH,fst1,fst2,TJRf,KQQR,SvBX,pst2,WijN,wijn,reFn,usg1,usj1"
                 },
                 {
                   "key": "adult_count",
