@@ -1,9 +1,9 @@
 # Postman collections
 
-Find the Postman collections for the Zumata Content API and Shopping & Booking API here:
+Find the Postman collections for the Rakuten Travel Xchange Content API and Shopping & Booking API here:
 
-* [Content API](https://raw.githubusercontent.com/Zumata/postman-collections/master/Content_API.postman_collection.json)
-* [Shopping & Booking API](https://raw.githubusercontent.com/Zumata/postman-collections/master/Shopping_and_Booking_API.postman_collection.json)
+* [Content API](https://raw.githubusercontent.com/rakutentravelxchange/postman-collections/master/Content_API.postman_collection.json)
+* [Shopping & Booking API](https://raw.githubusercontent.com/rakutentravelxchange/postman-collections/master/Shopping_and_Booking_API.postman_collection.json)
 
 ## Usage
 
@@ -15,4 +15,4 @@ Find the Postman collections for the Zumata Content API and Shopping & Booking A
 
 ## Documentation
 
-* [dev.zumata.com](https://dev.zumata.com/)
+* [dev.rakutentravelxchange.com](https://dev.rakutentravelxchange.com/)
