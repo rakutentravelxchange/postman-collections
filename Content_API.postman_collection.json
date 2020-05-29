@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "b3a862e0-543e-46bb-8a35-bf1daf1b1867",
     "name": "Content API",
-    "description": "formerly known as Athena\n\n* property contents (descriptions, policies, etc..)\n* property images\n* amenities\n* regions/city, Geo radius\n\nView documentation: http://dev.zumata.com/athena/index.html",
+    "description": "formerly known as Athena\n\n* property contents (descriptions, policies, etc..)\n* property images\n* amenities\n* regions/city, Geo radius\n\nView documentation: http://dev.rakutentravelxchange.com/athena/index.html",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -671,7 +671,7 @@
     {
       "id": "76bd669f-f009-41b7-8ec6-3e5a4f4fe9d6",
       "key": "url",
-      "value": "http://data.zumata.com",
+      "value": "http://data.rakutentravelxchange.com",
       "type": "string"
     }
   ],

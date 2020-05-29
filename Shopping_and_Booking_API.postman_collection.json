@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "007ef65c-260c-44d1-b1ea-9305f07575c7",
     "name": "Shopping & Booking API",
-    "description": "formerly known as Zeus\n\n* search/availability checking\n* book\n* cancel\n\nView documentation: http://dev.zumata.com/zeus/index.html",
+    "description": "formerly known as Zeus\n\n* search/availability checking\n* book\n* cancel\n\nView documentation: http://dev.rakutentravelxchange.com/zeus/index.html",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "item": [
@@ -1054,7 +1054,7 @@
     {
       "id": "3183d071-efc1-477b-b06d-8c85334fd04d",
       "key": "url",
-      "value": "https://api-v3.zumata.com",
+      "value": "https://api-v3.rakutentravelxchange.com",
       "type": "string"
     },
     {
