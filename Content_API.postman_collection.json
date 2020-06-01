@@ -81,7 +81,7 @@
             }
           ],
           "cookie": [],
-          "body": "{\n    \"address\": \"15 Merbau Road\",\n    \"approximate_cost\": 0,\n    \"category_id\": 1,\n    \"chain_code\": 0,\n    \"city\": \"Singapore\",\n    \"country\": \"\",\n    \"country_code\": \"SG\",\n    \"destination_ids\": [],\n    \"id\": \"PLPo\",\n    \"image_details\": {\n        \"count\": 20,\n        \"prefix\": \"https://zumata-v3-images.s3.amazonaws.com/PLPo/\",\n        \"suffix\": \".jpg\"\n    },\n    \"latitude\": 1.291272,\n    \"longitude\": 103.842017,\n    \"name\": \"Robertson Quay Hotel\",\n    \"original_name\": \"Robertson Quay Hotel\",\n    \"rating\": 3,\n    \"region_ids\": [],\n    \"trip_advisor_rating\": 0,\n    \"trip_advisor_review_count\": 0,\n    \"trustyou_rating\": 69,\n    \"trustyou_review_count\": 5860\n}"
+          "body": "{\n    \"address\": \"15 Merbau Road\",\n    \"approximate_cost\": 0,\n    \"category_id\": 1,\n    \"chain_code\": 0,\n    \"city\": \"Singapore\",\n    \"country\": \"\",\n    \"country_code\": \"SG\",\n    \"destination_ids\": [],\n    \"id\": \"PLPo\",\n    \"image_details\": {\n        \"count\": 20,\n        \"prefix\": \"https://d1rlkd47phdpvf.cloudfront.net/PLPo/\",\n        \"suffix\": \".jpg\"\n    },\n    \"latitude\": 1.291272,\n    \"longitude\": 103.842017,\n    \"name\": \"Robertson Quay Hotel\",\n    \"original_name\": \"Robertson Quay Hotel\",\n    \"rating\": 3,\n    \"region_ids\": [],\n    \"trip_advisor_rating\": 0,\n    \"trip_advisor_review_count\": 0,\n    \"trustyou_rating\": 69,\n    \"trustyou_review_count\": 5860\n}"
         }
       ]
     },
